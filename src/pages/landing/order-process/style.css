@@ -1,0 +1,21 @@
+.process,
+.process .step {
+  display: flex;
+}
+.process .step .content {
+  max-width: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.process .step .arrow,
+.process .step .icon {
+  width: 150px;
+  height: 150px;
+}
+.process .step .icon img {
+  width: 100%;
+}
