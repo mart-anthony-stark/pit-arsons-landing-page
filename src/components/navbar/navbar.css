@@ -1,0 +1,31 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: #3b3b3ba6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+nav img.logo {
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+  height: 50px;
+}
+nav .cart {
+  padding-right: 20px;
+  color: red;
+}
+nav .links {
+  display: flex;
+  gap: 20px;
+}
+nav .links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
