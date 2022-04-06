@@ -1,0 +1,64 @@
+.home .hero-section .banner {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../../images/home/hero-section.jpg");
+  background-size: cover;
+}
+.home .hero-section .banner h1,
+.home .hero-section .banner h2 {
+  margin-top: 0;
+  color: #fff;
+}
+.home .hero-section .banner h2 {
+  color: #fff;
+}
+.home .welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.home .welcome img {
+  height: 100px;
+}
+.home .welcome p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Bestsellers section */
+
+#root > div > div > div.best-sellers.center.col {
+  padding: 30px 100px;
+}
+
+#root > div > div > div > div.best-sellers.center.col > hr {
+  height: -4px;
+  width: 100%;
+  background: darkgrey;
+  margin: 20px;
+}
+
+/* Bestseller cards section */
+
+.home .cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.home .order-banner {
+  background: url("../../images/home-banner-icons/Home-Banner-Bg.png");
+  color: #fff;
+  padding: 50px;
+  gap: 30px;
+}
