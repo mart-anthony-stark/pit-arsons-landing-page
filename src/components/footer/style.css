@@ -1,0 +1,43 @@
+footer {
+  padding: 50px 0;
+}
+footer .footer-cont {
+  background: url("../../images/footer-bg.jpg");
+  background-size: cover;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-cont .logo {
+  height: 150px;
+}
+footer .links {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .links h2 {
+  color: #bb1313;
+}
+footer .links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+}
+
+footer .links.newsletter .email-input {
+  width: 300px;
+  display: flex;
+  background: #fff;
+}
+footer .links.newsletter .email-input input {
+  width: 100%;
+}
+footer .links.newsletter .email-input button {
+  padding: 10px;
+  border: none;
+  background: #877070;
+  color: #fff;
+}
