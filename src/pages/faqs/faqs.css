@@ -1,0 +1,35 @@
+.faqs .items {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.faqs .items .item {
+  width: 100%;
+}
+.faqs .items .item .question {
+  background: #a6a6a6;
+  color: #fff;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  cursor: pointer;
+}
+.faqs .items .item .question .indicator {
+  color: var(--c-accent);
+}
+.faqs .items .item .question .close {
+  transform: rotate(45deg);
+}
+
+.faqs .items .item .answer {
+  background: #f0f0f0;
+  color: #000;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.faqs .items .item .answer .grp {
+  margin-top: 20px;
+}
