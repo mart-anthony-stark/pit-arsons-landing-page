@@ -35,7 +35,7 @@ function App() {
             }
           />
           <Route
-            path="/meats"
+            path="/meats/:category"
             element={
               <Suspense fallback={<></>}>
                 <Meats />
