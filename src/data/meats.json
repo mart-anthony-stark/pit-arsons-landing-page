@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Half Smoked Chicken Peri-peri",
+        "category": "Chicken",
+        "price": 350,
+        "img": "/src/images/Meats-Chicken/half-smoked-chicken.JPG"
+    },
+    {
+        "name": "Whole Smoked Chicken Peri-peri",
+        "category": "Chicken",
+        "price": 600,
+        "img": "/src/images/Meats-Chicken/whole-smoked-chicken.JPG"
+    },
+    {
+        "name": "Smoked Pork Ribs",
+        "category": "Pork",
+        "price": 1300,
+        "img": "/src/images/Meats-Pork/pork-ribs.JPG"
+    },
+    {
+        "name": "4's Homemade Smoked Beef Sausage",
+        "category": "Sausage",
+        "price": 380,
+        "img": "/src/images/Meats-Sausage/sausage-4.JPG"
+    },
+    {
+        "name": "8's Homemade Smoked Beef Sausage",
+        "category": "Sausage",
+        "price": 750,
+        "img": "/src/images/Meats-Sausage/sausage-8.JPG"
+    },
+    {
+        "name": "250g USDA Angus Smoked Beef Belly",
+        "category": "Smoke U.S. Angus Beef",
+        "price": 500,
+        "img": "/src/images/Meats-AngusBeef/angus250.JPG"
+    },
+    {
+        "name": "500g USDA Angus Smoked Beef Belly",
+        "category": "Smoke U.S. Angus Beef",
+        "price": 500,
+        "img": "/src/images/Meats-AngusBeef/angus500.JPG"
+    },
+    {
+        "name": "1kg USDA Angus Smoked Beef Belly",
+        "category": "Smoke U.S. Angus Beef",
+        "price": 500,
+        "img": "/src/images/Meats-AngusBeef/angus1kg.JPG"
+    },
+    {
+        "name": "Token Box",
+        "category": "Gift Box",
+        "price": 2950,
+        "img": "/src/images/Meats-GiftBox/token-box.JPG"
+    },
+    {
+        "name": "Black Box",
+        "category": "Gift Box",
+        "price": 4300,
+        "img": "/src/images/Meats-GiftBox/black-box.JPG"
+    },
+    {
+        "name": "Smoked Salmon",
+        "category": "Others",
+        "price": 580,
+        "img": "/src/images/Meats-Others/salmon.JPG"
+    },
+    {
+        "name": "Chili con Carne",
+        "category": "Others",
+        "price": 350,
+        "img": "/src/images/Meats-Others/chili-con-carne.JPG"
+    },
+    {
+        "name": "Original B-B-Q Sauce",
+        "category": "Others",
+        "price": 150,
+        "img": "/src/images/Meats-Others/bbq-sauce.JPG"
+    },
+    {
+        "name": "Extra Hot B-B-Q Sauce",
+        "category": "Others",
+        "price": 150,
+        "img": "/src/images/Meats-Others/extra-hot-bbq.JPG"
+    }
+]
