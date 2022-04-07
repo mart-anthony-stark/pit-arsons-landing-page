@@ -6,6 +6,9 @@
   font-family: "Montserrat", sans-serif;
   font-family: "Source Sans Pro", sans-serif;
 }
+:root {
+  --c-accent: #bf1313;
+}
 .center {
   display: flex;
   justify-content: center;
