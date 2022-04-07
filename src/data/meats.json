@@ -4,97 +4,111 @@
         "name": "Half Smoked Chicken Peri-peri",
         "category": "Chicken",
         "price": 350,
-        "img": "/src/images/Meats-Chicken/half-smoked-chicken.JPG"
+        "img": "/src/images/Meats-Chicken/half-smoked-chicken.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":2,
         "name": "Whole Smoked Chicken Peri-peri",
         "category": "Chicken",
         "price": 600,
-        "img": "/src/images/Meats-Chicken/whole-smoked-chicken.JPG"
+        "img": "/src/images/Meats-Chicken/whole-smoked-chicken.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":3,
         "name": "Smoked Pork Ribs",
         "category": "Pork",
         "price": 1300,
-        "img": "/src/images/Meats-Pork/pork-ribs.JPG"
+        "img": "/src/images/Meats-Pork/pork-ribs.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":4,
         "name": "4's Homemade Smoked Beef Sausage",
         "category": "Sausage",
         "price": 380,
-        "img": "/src/images/Meats-Sausage/sausage-4.JPG"
+        "img": "/src/images/Meats-Sausage/sausage-4.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":5,
         "name": "8's Homemade Smoked Beef Sausage",
         "category": "Sausage",
         "price": 750,
-        "img": "/src/images/Meats-Sausage/sausage-8.JPG"
+        "img": "/src/images/Meats-Sausage/sausage-8.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":6,
         "name": "250g USDA Angus Smoked Beef Belly",
         "category": "Smoke U.S. Angus Beef",
         "price": 500,
-        "img": "/src/images/Meats-AngusBeef/angus250.JPG"
+        "img": "/src/images/Meats-AngusBeef/angus250.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":7,
         "name": "500g USDA Angus Smoked Beef Belly",
         "category": "Smoke U.S. Angus Beef",
         "price": 500,
-        "img": "/src/images/Meats-AngusBeef/angus500.JPG"
+        "img": "/src/images/Meats-AngusBeef/angus500.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":8,
         "name": "1kg USDA Angus Smoked Beef Belly",
         "category": "Smoke U.S. Angus Beef",
         "price": 500,
-        "img": "/src/images/Meats-AngusBeef/angus1kg.JPG"
+        "img": "/src/images/Meats-AngusBeef/angus1kg.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":9,
         "name": "Token Box",
         "category": "Gift Box",
         "price": 2950,
-        "img": "/src/images/Meats-GiftBox/token-box.JPG"
+        "img": "/src/images/Meats-GiftBox/token-box.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":10,
         "name": "Black Box",
         "category": "Gift Box",
         "price": 4300,
-        "img": "/src/images/Meats-GiftBox/black-box.JPG"
+        "img": "/src/images/Meats-GiftBox/black-box.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":11,
         "name": "Smoked Salmon",
         "category": "Others",
         "price": 580,
-        "img": "/src/images/Meats-Others/salmon.JPG"
+        "img": "/src/images/Meats-Others/salmon.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":12,
         "name": "Chili con Carne",
         "category": "Others",
         "price": 350,
-        "img": "/src/images/Meats-Others/chili-con-carne.JPG"
+        "img": "/src/images/Meats-Others/chili-con-carne.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":13,
         "name": "Original B-B-Q Sauce",
         "category": "Others",
         "price": 150,
-        "img": "/src/images/Meats-Others/bbq-sauce.JPG"
+        "img": "/src/images/Meats-Others/bbq-sauce.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     },
     {
         "id":14,
         "name": "Extra Hot B-B-Q Sauce",
         "category": "Others",
         "price": 150,
-        "img": "/src/images/Meats-Others/extra-hot-bbq.JPG"
+        "img": "/src/images/Meats-Others/extra-hot-bbq.JPG",
+        "description":"Slabs of pork ribs infused with an authentic smokey flavor."
     }
 ]
