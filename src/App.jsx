@@ -9,6 +9,10 @@ import Footer from "./components/footer/Footer";
 const About = lazy(() => import("./pages/about/About"));
 const Home = lazy(() => import("./pages/landing/Home"));
 const Meats = lazy(() => import("./pages/meats/Meats"));
+const SingleProduct = lazy(() =>
+  import("./pages/single-product/SingleProduct")
+);
+const FAQs = lazy(() => import("./pages/faqs/FAQs"));
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,10 +39,26 @@ function App() {
             }
           />
           <Route
+            path="/meats/item/:id"
+            element={
+              <Suspense fallback={<></>}>
+                <SingleProduct />
+              </Suspense>
+            }
+          />
+          <Route
             path="/meats/:category"
             element={
               <Suspense fallback={<></>}>
                 <Meats />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/faqs"
+            element={
+              <Suspense fallback={<></>}>
+                <FAQs />
               </Suspense>
             }
           />
