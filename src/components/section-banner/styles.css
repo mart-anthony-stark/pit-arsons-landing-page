@@ -1,0 +1,34 @@
+.section-banner {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.section-banner h1,
+.section-banner h2 {
+  color: #fff;
+}
+.section-banner h2 {
+  color: #c29678;
+  font-size: 2rem;
+  font-family: Edo;
+}
+.section-banner .overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.section-banner img {
+  position: absolute;
+  height: 150%;
+  width: 100%;
+  z-index: -2;
+}
