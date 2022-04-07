@@ -22,7 +22,9 @@ nav .cart {
 }
 nav .links {
   display: flex;
-  gap: 20px;
+  gap: 50px;
+  flex: 1;
+  justify-content: center;
 }
 nav .links a {
   text-decoration: none;
