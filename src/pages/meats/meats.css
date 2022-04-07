@@ -1,0 +1,38 @@
+.meats section {
+  padding: 50px;
+  display: flex;
+  gap: 100px;
+  align-items: flex-start;
+}
+.meats .categories {
+  border-collapse: collapse;
+  max-width: 300px;
+  width: 100%;
+  position: sticky;
+  top: 100px;
+}
+.meats .categories tr {
+  border-bottom: 1px solid var(--c-accent);
+  cursor: pointer;
+}
+.meats .categories td,
+.categories th {
+  padding: 10px 20px;
+}
+.meats .categories td.arrow {
+  width: 50px;
+}
+.meats .categories th {
+  text-align: left;
+  font-size: 2rem;
+  color: var(--c-accent);
+}
+.meats .items {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.meats .items h1 {
+  font-size: 2rem;
+}
