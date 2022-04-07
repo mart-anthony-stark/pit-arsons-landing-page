@@ -1,0 +1,19 @@
+/* Single item card */
+.meat-item {
+  display: flex;
+  gap: 15px;
+  max-width: 550px;
+}
+.meat-item img {
+  width: 250px;
+  height: 250px;
+}
+
+.meat-item .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.meat-item button {
+  width: 200px;
+}
