@@ -8,10 +8,10 @@ const Navbar = () => {
       <img className="logo" src={logo} alt="" />
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="/">About</Link>
-        <Link to="/">Meats</Link>
-        <Link to="/">FAQs</Link>
-        <Link to="/">Contact Us</Link>
+        <Link to="/about">About</Link>
+        <Link to="/meats">Meats</Link>
+        <Link to="/faqs">FAQs</Link>
+        <Link to="/contact">Contact Us</Link>
       </div>
       <div className="cart"></div>
     </nav>
