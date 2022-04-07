@@ -14,3 +14,10 @@
 .col {
   flex-direction: column;
 }
+@font-face {
+  font-family: Edo;
+  src: url("/src/fonts/edo.ttf");
+}
+section {
+  min-height: 100vh;
+}
