@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-position: center;
+  background-position: bottom;
   gap: 20px;
   overflow: hidden;
   position: relative;
