@@ -2,6 +2,9 @@ import "./single-product.css";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import MeatsData from "../../data/meats";
+import b1 from "/src/images/home/angus-smoked-beef.jpg";
+import o1 from "/src/images/Meats-Others/_salmon.jpg";
+import c1 from "/src/images/home/whole-smoked-chicken.jpg";
 
 const SingleProduct = () => {
   const navigate = useNavigate();
@@ -73,6 +76,27 @@ const SingleProduct = () => {
           <div className="desc">
             <h2 className="heading">Description</h2>
             <span>{item.description}</span>
+          </div>
+        </div>
+
+        <div className="suggestions">
+          <h1 className="heading">You May Also Like</h1>
+          <div className="items center">
+            <div className="item">
+              <img src={b1} alt="" />
+              <h2 className="name">1kg USDA Angus Smoked Beef Belly</h2>
+              <span>₱ 1900</span>
+            </div>
+            <div className="item">
+              <img src={o1} alt="" />
+              <h2 className="name">Smoked Salmon</h2>
+              <span>₱ 580</span>
+            </div>
+            <div className="item">
+              <img src={c1} alt="" />
+              <h2 className="name">Whole Smoked Chicken Peri-peri</h2>
+              <span>₱ 600</span>
+            </div>
           </div>
         </div>
       </section>
