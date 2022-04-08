@@ -1,5 +1,6 @@
 import "./cart.css";
 import MeatData from "../../data/meats";
+import Button from "../../components/button/Button";
 import { useState } from "react";
 
 const cartItems = [
@@ -40,6 +41,10 @@ const Cart = () => {
     const newCart = cart.filter((product) => product.item.id !== id);
     setCart(newCart);
   };
+
+  const subtotal = cart.reduce((prev, product) => {
+    return (prev += product.item.price * product.quantity);
+  }, 0);
 
   return (
     <div className="cart-page">
@@ -97,8 +102,23 @@ const Cart = () => {
                 </tr>
               );
             })}
+            <tr>
+              <td></td>
+              <td></td>
+              <td>
+                <h2 className="text-center">Subtotal</h2>
+              </td>
+              <td>
+                <h2>₱ {subtotal}</h2>
+              </td>
+            </tr>
           </tbody>
         </table>
+        
+        <div className="buttons flex-end">
+          <Button>Continue Shopping</Button>
+          <Button>Checkout</Button>
+        </div>
       </section>
     </div>
   );
