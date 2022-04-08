@@ -1,6 +1,7 @@
 import "./single-product.css";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import MeatsData from "../../data/meats";
 
 const SingleProduct = () => {
   const navigate = useNavigate();
@@ -19,10 +20,10 @@ const SingleProduct = () => {
   ]);
 
   const getItem = async () => {
-    const res = await fetch(`/src/data/meats.json`);
-    const data = await res.json();
+    // const res = await fetch(`/src/data/meats.json`);
+    // const data = await res.json();
 
-    const i = data.find((d) => d.id == id);
+    const i = MeatsData.find((d) => d.id == id);
 
     if (!i) return navigate(-1);
     setItem(i);
