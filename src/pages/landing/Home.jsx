@@ -5,22 +5,25 @@ import ProductCard from "../../components/product-card/ProductCard";
 import OrderProcess from "./order-process/OrderProcess";
 
 // import bestseller1 from
+import b1 from "/src/images/home/angus-smoked-beef.jpg";
+import b2 from "/src/images/home/smoked-pork-ribs.jpg";
+import b3 from "/src/images/home/whole-smoked-chicken.jpg";
 
 const bestSellers = [
   {
     name: "USDA Angus Smoked Beef Belly",
     price: 500,
-    img: "/src/images/home/angus-smoked-beef.jpg",
+    img: b1,
   },
   {
     name: "Smoked Pork Ribs",
     price: 1300,
-    img: "/src/images/home/smoked-pork-ribs.jpg",
+    img: b2,
   },
   {
     name: "Whole Smoked Chicken Peri-peri",
     price: 350,
-    img: "/src/images/home/whole-smoked-chicken.jpg",
+    img: b3,
   },
 ];
 

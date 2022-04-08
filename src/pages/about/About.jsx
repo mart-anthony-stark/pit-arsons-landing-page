@@ -1,6 +1,11 @@
 import SectionBanner from "../../components/section-banner/SectionBanner";
 import "./about.css";
 import BannerImg from "/src/images/About/about-banner.png";
+import Beef from "/src/images/About/about-pic.jpg";
+import Taco from "/src/images/About/about-taco-bite.jpg";
+import Steak from "/src/images/About/hr-steak.png";
+import Agdon from "/src/images/About/john-paul-agdon.png";
+import Santiago from "/src/images/About/mark-santiago.png";
 
 const About = () => {
   return (
@@ -15,7 +20,7 @@ const About = () => {
 
       <section>
         <div className="desc">
-          <img src="/src/images/About/about-pic.JPG" alt="About us" />
+          <img src={Beef} alt="About us" />
           <div className="text">
             <h1>WHO ARE WE?</h1>
             <p>
@@ -44,15 +49,11 @@ const About = () => {
               their own homes.
             </p>
           </div>
-          <img src="/src/images/About/about-taco-bite.jpg" alt="Taco bite" />
+          <img src={Taco} alt="Taco bite" />
         </div>
 
         <div className="meat-the-team">
-          <img
-            className="divider"
-            src="/src/images/About/hr-steak.png"
-            alt="Meat the team"
-          />
+          <img className="divider" src={Steak} alt="Meat the team" />
           <h1>MEAT THE TEAM</h1>
           <span>
             From our kitchens, to your homes, here's the people that made it all
@@ -60,13 +61,13 @@ const About = () => {
           </span>
           <div className="owners">
             <div className="owner">
-              <img src="/src/images/About/john-paul-agdon.png" alt="" />
+              <img src={Agdon} alt="" />
               <div className="name">
                 John Paul Agdon <span>Owner</span>
               </div>
             </div>
             <div className="owner">
-              <img src="/src/images/About/mark-santiago.png" alt="" />
+              <img src={Santiago} alt="" />
               <div className="name">
                 Mark Santiago <span>Owner / Chef</span>
               </div>

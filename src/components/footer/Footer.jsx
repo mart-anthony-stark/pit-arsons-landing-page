@@ -1,10 +1,11 @@
 import "./style.css";
+import logo from "../../images/logo.png";
 
 const Footer = () => {
   return (
     <footer>
       <div className="footer-cont">
-        <img className="logo" src="/src/images/logo.png" alt="Logo" />
+        <img className="logo" src={logo} alt="Logo" />
         <div className="links">
           <h2>Explore</h2>
           <ul>
