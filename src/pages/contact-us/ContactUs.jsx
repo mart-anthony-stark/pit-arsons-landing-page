@@ -4,7 +4,6 @@ import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import BannerBG from "/src/images/FAQs/faq-bg.png";
 
 const ContactUs = () => {
   return (
@@ -13,7 +12,7 @@ const ContactUs = () => {
         data={{
           topHeading: "PENNY FOR YOUR THOUGHTS",
           subHeading: "CONTACT US",
-          img: BannerBG,
+          img: 'contact',
         }}
       />
       <section className="center col">

@@ -1,6 +1,5 @@
 import SectionBanner from "../../components/section-banner/SectionBanner";
 import "./about.css";
-import BannerImg from "../../images/About/about-banner.png";
 import Beef from "../../images/About/aboutpic.jpg";
 import Taco from "../../images/About/about-taco-bite.jpg";
 import Steak from "../../images/About/hr-steak.png";
@@ -14,7 +13,7 @@ const About = () => {
         data={{
           topHeading: "BEHIND THE BARBECUE",
           subHeading: "WHAT PIT ARSONS IS ALL ABOUT",
-          img: BannerImg,
+          img: "about",
         }}
       />
 

@@ -1,7 +1,6 @@
 import "./meats.css";
 import { useState, useEffect } from "react";
 import SectionBanner from "../../components/section-banner/SectionBanner";
-import BannerBG from "/src/images/Meats-Chicken/meats_banner.png";
 import { useNavigate, useParams } from "react-router-dom";
 import MeatItem from "../../components/meat-item/MeatItem";
 import MeatsData from "../../data/meats";
@@ -56,7 +55,7 @@ const Meats = () => {
         data={{
           topHeading: "SHOP. EAT. MEAT.",
           subHeading: "MEATS",
-          img: BannerBG,
+          img: 'meats',
         }}
       />
 
