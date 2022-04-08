@@ -52,11 +52,11 @@
 
 .home .cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 30px 100px;
   width: 100%;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 100px;
 }
 
 .home .order-banner {
