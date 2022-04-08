@@ -36,3 +36,7 @@ nav .links a {
 #root > div > nav > div.cart > span > span {
   background: aliceblue;
 }
+#root > div > nav > div.cart > span > a > svg {
+  font-size: 35px;
+  color: var(--c-accent);
+}
