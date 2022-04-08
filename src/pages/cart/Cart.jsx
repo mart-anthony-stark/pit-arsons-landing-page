@@ -2,6 +2,7 @@ import "./cart.css";
 import MeatData from "../../data/meats";
 import Button from "../../components/button/Button";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const cartItems = [
   {
@@ -114,10 +115,12 @@ const Cart = () => {
             </tr>
           </tbody>
         </table>
-        
+
         <div className="buttons flex-end">
           <Button>Continue Shopping</Button>
-          <Button>Checkout</Button>
+          <Button>
+            <Link to="/checkout/instructions">Checkout</Link>
+          </Button>
         </div>
       </section>
     </div>

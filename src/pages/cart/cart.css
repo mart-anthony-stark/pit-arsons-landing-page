@@ -42,3 +42,6 @@
 .cart-page .buttons {
   gap: 25px;
 }
+.cart-page a {
+  all: unset;
+}
