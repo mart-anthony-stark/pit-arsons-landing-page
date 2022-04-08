@@ -1,6 +1,7 @@
 import SectionBanner from "../../components/section-banner/SectionBanner";
 import "./faqs.css";
 import { useState } from "react";
+import BannerBG from "/src/images/FAQs/faq-bg.png";
 
 const FAQs = () => {
   const [openedQuestions, setOpenedQuestions] = useState([1, 2]);
@@ -26,7 +27,7 @@ const FAQs = () => {
         data={{
           topHeading: "Queries? CONCERNS?",
           subHeading: "FREQUENTLY ASKED QUESTIONS",
-          img: "/src/images/FAQs/faq-bg.PNG",
+          img: BannerBG,
         }}
       />
       <section>
