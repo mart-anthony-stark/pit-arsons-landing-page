@@ -15,6 +15,7 @@ const SingleProduct = lazy(() =>
 const FAQs = lazy(() => import("./pages/faqs/FAQs"));
 const ContactUs = lazy(() => import("./pages/contact-us/ContactUs"));
 const Cart = lazy(() => import("./pages/cart/Cart"));
+const Checkout = lazy(() => import("./pages/checkout/Checkout"));
 
 function App() {
   const [count, setCount] = useState(0);
@@ -77,6 +78,14 @@ function App() {
             element={
               <Suspense fallback={<></>}>
                 <Cart />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/checkout/:step"
+            element={
+              <Suspense fallback={<></>}>
+                <Checkout />
               </Suspense>
             }
           />
