@@ -79,6 +79,11 @@ const questions = [
         <div>PAUL JOHN AGDON </div>
         <div> 1889219579</div>
         <div>Savings Account</div>
+        <div className="grp">
+          <strong>GCASH</strong> - Mobile Wallet
+        </div>
+        <div>JOHN PAUL A. </div>
+        <div>09175134495</div>
       </>
     ),
   },
