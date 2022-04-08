@@ -1,9 +1,10 @@
 import "./meats.css";
 import { useState, useEffect } from "react";
 import SectionBanner from "../../components/section-banner/SectionBanner";
-import BannerImg from "/src/images/Meats-Chicken/meats-banner.png";
+import BannerBG from "/src/images/Meats-Chicken/meats_banner.png";
 import { useNavigate, useParams } from "react-router-dom";
 import MeatItem from "../../components/meat-item/MeatItem";
+import MeatsData from "../../data/meats";
 
 const categories = [
   { name: "Chicken", link: "/meats/chicken" },
@@ -26,9 +27,10 @@ const Meats = () => {
   );
 
   const getAllMeats = async () => {
-    const res = await fetch("/src/data/meats.json");
-    const data = await res.json();
-    setMeats(data);
+    // const res = await fetch("/src/data/meats.json");
+    // const data = await res.json();
+    // setMeats(data);
+    setMeats(MeatsData);
   };
 
   useEffect(() => {
@@ -54,7 +56,7 @@ const Meats = () => {
         data={{
           topHeading: "SHOP. EAT. MEAT.",
           subHeading: "MEATS",
-          img: BannerImg,
+          img: BannerBG,
         }}
       />
 
