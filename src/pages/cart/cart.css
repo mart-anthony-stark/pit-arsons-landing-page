@@ -5,9 +5,11 @@
   border-collapse: collapse;
   width: 100%;
 }
-.cart-page section table,
 .cart-page section table th {
   border-bottom: 2px solid #ddcbbe;
+}
+#root > div > div > section > table > tbody > tr:last-child {
+  border-top: 2px solid #ddcbbe;
 }
 .cart-page section table th {
   padding: 10px 5px;
@@ -36,4 +38,7 @@
   border: none;
   padding: 15px;
   cursor: pointer;
+}
+.cart-page .buttons {
+  gap: 25px;
 }
