@@ -30,3 +30,8 @@ section {
 .text-pri {
   color: #bf1313;
 }
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
