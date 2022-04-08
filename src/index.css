@@ -24,3 +24,9 @@
 section {
   min-height: 100vh;
 }
+.text-center {
+  text-align: center !important;
+}
+.text-pri {
+  color: #bf1313;
+}
