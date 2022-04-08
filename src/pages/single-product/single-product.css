@@ -28,7 +28,7 @@
   color: rgb(158, 158, 158);
 }
 .single-product .item-desc .top h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .single-product .item-desc .top .price {
@@ -63,7 +63,7 @@
 }
 
 .single-product .add-to-cart {
-  max-width: 350px;
+  max-width: 300px;
   width: 100%;
 }
 
@@ -79,4 +79,29 @@
 .single-product .content .desc span {
   font-size: 1.5rem;
   margin-left: 3rem;
+}
+
+.single-product .suggestions {
+  text-align: center;
+  margin-top: 50px;
+}
+.single-product .suggestions .heading {
+  font-size: 2rem;
+}
+.single-product .suggestions .items {
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.single-product .suggestions .items .item {
+  width: 300px;
+}
+.single-product .suggestions .items .item img {
+  width: 100%;
+  height: 300px;
+}
+.single-product .suggestions .items .item span {
+  font-size: 1.5rem;
 }
