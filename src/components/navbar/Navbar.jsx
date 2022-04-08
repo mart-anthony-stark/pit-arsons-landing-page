@@ -19,7 +19,9 @@ const Navbar = () => {
       </div>
       <div className="cart">
         <Badge badgeContent={quantity} color="red">
-          <ShoppingCartRoundedIcon />
+          <Link to="/cart">
+            <ShoppingCartRoundedIcon />
+          </Link>
         </Badge>
       </div>
     </nav>
