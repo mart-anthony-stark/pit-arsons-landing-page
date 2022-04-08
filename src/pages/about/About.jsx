@@ -1,11 +1,11 @@
 import SectionBanner from "../../components/section-banner/SectionBanner";
 import "./about.css";
-import BannerImg from "/src/images/About/about-banner.png";
-import Beef from "/src/images/About/about-pic.jpg";
-import Taco from "/src/images/About/about-taco-bite.jpg";
-import Steak from "/src/images/About/hr-steak.png";
-import Agdon from "/src/images/About/john-paul-agdon.png";
-import Santiago from "/src/images/About/mark-santiago.png";
+import BannerImg from "../../images/About/about-banner.png";
+import Beef from "../../images/About/about-pic.jpg";
+import Taco from "../../images/About/about-taco-bite.jpg";
+import Steak from "../../images/About/hr-steak.png";
+import Agdon from "../../images/About/john-paul-agdon.png";
+import Santiago from "../../images/About/mark-santiago.png";
 
 const About = () => {
   return (
