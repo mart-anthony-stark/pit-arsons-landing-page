@@ -10,10 +10,12 @@ const Instructions = () => {
       </div>
       <div className="buttons flex-end center">
         <Link to="/cart">Return to Checkout</Link>
-        <Button>
-          Proceed to Customer <br />
-          Information
-        </Button>
+        <Link to="/checkout/information">
+          <Button>
+            Proceed to Customer <br />
+            Information
+          </Button>
+        </Link>
       </div>
     </div>
   );
