@@ -35,3 +35,8 @@ section {
   display: flex;
   justify-content: flex-end;
 }
+
+a {
+  color: #000;
+  text-decoration: none;
+}
