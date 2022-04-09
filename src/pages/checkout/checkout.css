@@ -37,7 +37,7 @@
   padding: 20px;
 }
 
-.checkout-page .special-instructions .buttons {
+.checkout-page .buttons {
   margin-top: 20px;
   gap: 15px;
 }
@@ -46,4 +46,3 @@
   cursor: pointer;
   color: #000;
 }
-
