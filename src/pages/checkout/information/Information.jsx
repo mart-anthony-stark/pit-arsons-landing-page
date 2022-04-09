@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Deliver from "./Deliver";
+import Collect from "./Collect";
 
 const Information = () => {
   const [deliveryMethod, setDeliveryMethod] = useState("deliver");
@@ -96,7 +97,7 @@ const Information = () => {
         <Deliver />
       ) : (
         //   Render when delivery method is collect
-        <></>
+        <Collect />
       )}
 
       <div className="buttons flex-end center">
