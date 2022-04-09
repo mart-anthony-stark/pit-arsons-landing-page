@@ -1,8 +1,9 @@
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import HouseOutlinedIcon from "@mui/icons-material/HouseOutlined";
 import "./style.css";
+import Button from "../../../components/button/Button";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 import Deliver from "./Deliver";
 
@@ -97,6 +98,14 @@ const Information = () => {
         //   Render when delivery method is collect
         <></>
       )}
+
+      <div className="buttons flex-end center">
+        <Link to="/checkout/instructions">
+          Return to Special
+          <br /> Instructions
+        </Link>
+        <Button>Proceed to Payment</Button>
+      </div>
     </div>
   );
 };
