@@ -106,3 +106,15 @@
 .checkout-page .information .buttons {
   gap: 15px;
 }
+
+.checkout-page .information .address {
+  margin-left: 20px;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(244, 244, 244);
+  padding: 20px;
+}
+.checkout-page .information .address .left {
+  font-size: 1.2rem;
+}
