@@ -3,24 +3,38 @@
   padding: 0 100px;
 }
 
+.checkout-page .information h1 {
+  margin-top: 20px;
+}
+
 .checkout-page .information .two-cols {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 660px;
   gap: 20px;
-  grid-template-columns: 320px 320px;
 }
 .checkout-page .information .top {
   width: 100%;
 }
-.checkout-page .information .top input,
+.checkout-page .information .two-cols input,
+.checkout-page .information input.full,
 .checkout-page .information .gender {
   padding: 10px 20px;
   max-width: 300px;
   background: #f4f4f4;
   border: none;
   width: 100%;
+  font-size: 1.2rem;
 }
-.checkout-page .information .top .two-cols {
-  margin-bottom: 10px;
+.checkout-page .information input.full {
+  max-width: 100%;
+}
+.checkout-page .information .top .two-cols,
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mt-20 {
+  margin-top: 20px;
 }
 .checkout-page .information .gender {
   display: flex;
@@ -60,6 +74,14 @@
   gap: 5px;
 }
 
+.checkout-page
+  .information
+  .delivery-method
+  input[type="radio"]:checked
+  + label {
+  color: var(--c-accent);
+}
+
 .checkout-page .information .courier-opts .method {
   background: #f4f4f4;
   border: none !important;
@@ -70,4 +92,17 @@
 .checkout-page .information .courier-opts img {
   height: 50px;
   width: 100px;
+}
+.checkout-page .input-container {
+  max-width: 620px;
+}
+
+.checkout-page .information input[type="date"] {
+  padding: 10px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.checkout-page .information .buttons {
+  gap: 15px;
 }
