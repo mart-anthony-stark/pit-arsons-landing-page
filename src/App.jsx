@@ -17,11 +17,14 @@ const ContactUs = lazy(() => import("./pages/contact-us/ContactUs"));
 const Cart = lazy(() => import("./pages/cart/Cart"));
 const Checkout = lazy(() => import("./pages/checkout/Checkout"));
 
+import { Toaster } from 'react-hot-toast';
+
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
+      <Toaster />
       <BrowserRouter>
         <Navbar />
         <Routes>
