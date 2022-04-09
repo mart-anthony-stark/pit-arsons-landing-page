@@ -26,6 +26,27 @@ const Deliver = () => {
           </label>
         </div>
       </div>
+
+      <h1>Delivery Address</h1>
+      <div className="input-container">
+        <div className="two-cols">
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <input type="text" placeholder="Street" className="full mt-20" />
+        <input type="text" placeholder="Barangay" className="full mt-20" />
+        <div className="two-cols mt-20">
+          <input type="text" placeholder="City" />
+          <input type="text" placeholder="Region" />
+        </div>
+        <div className="two-cols mt-20">
+          <input type="text" placeholder="Country" />
+          <input type="text" placeholder="Zip Code" />
+        </div>
+      </div>
+
+      <h1>Delivery Date & Time</h1>
+      <input type="date" />
     </>
   );
 };
