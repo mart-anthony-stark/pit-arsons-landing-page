@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link to="/contact">Contact Us</Link>
       </div>
       <div className="cart">
-        <Badge badgeContent={quantity} color="red">
+        <Badge badgeContent={quantity}>
           <Link to="/cart">
             <ShoppingCartRoundedIcon />
           </Link>
