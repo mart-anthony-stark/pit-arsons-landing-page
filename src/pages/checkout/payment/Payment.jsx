@@ -1,5 +1,5 @@
 import Gcash from "../../../images/Bank Logos/gcash-logo.png";
-import COD from "../../../images/Bank Logos/CODE.png";
+import COD from "../../../images/Bank Logos/COD.png";
 import BPI from "../../../images/Bank Logos/bpi-logo.jpg";
 import BDO from "../../../images/Bank Logos/bdo-logo.png";
 import Button from "../../../components/button/Button";
