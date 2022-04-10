@@ -105,7 +105,6 @@ const questions = [
         <div>
           4. Pour some remaining juices on the meat and baste it with sauce.
         </div>
-
         <div className="grp">
           <strong>SOUS VIDE</strong>
         </div>
@@ -118,27 +117,45 @@ const questions = [
         <div>
           4. Pour some remaining juices on the meat and baste it with sauce.
         </div>
+        <br />
+        NOTE: Use of microwave reheating can diminish the quality of the
+        product.
       </>
     ),
   },
   {
     id: 3,
     question: "How many people is each order suitable for?",
-    answer: <h1></h1>,
+    answer: (
+      <p>
+        250g (Php 450) is good for 1-2 pax
+        <br />
+        500g(Php 800) is good for 4-6 pax
+        <br />
+        250g (Php 1500) is good for 8-10 pax
+        <br />
+      </p>
+    ),
   },
   {
     id: 4,
     question: "How long is the shelf life?",
-    answer: <h1></h1>,
+    answer: (
+      <p>
+        <strong>2-3 weeks</strong> if kept in the freezer
+        <br />
+        <strong>2-3 days</strong> if kept in the chiller
+      </p>
+    ),
   },
   {
     id: 5,
     question: "Do you accept COD?",
-    answer: <h1></h1>,
+    answer: <p>YES!!</p>,
   },
   {
     id: 6,
     question: "Do you accept personal pick-up?",
-    answer: <h1></h1>,
+    answer: <p>We do indeed!</p>,
   },
 ];
