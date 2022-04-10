@@ -5,11 +5,15 @@ import MeatsData from "../../data/meats";
 import b1 from "/src/images/home/angus-smoked-beef.jpg";
 import o1 from "/src/images/Meats-Others/_salmon.jpg";
 import c1 from "/src/images/home/whole-smoked-chicken.jpg";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/cartRedux";
 
 const SingleProduct = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
+
   const [item, setItem] = useState([
     {
       category: "Chicken",
@@ -47,6 +51,10 @@ const SingleProduct = () => {
     }
   };
 
+  const handleAddToCart = () => {
+    dispatch(addProduct({ item, quantity }));
+  };
+
   return (
     <div className="single-product">
       <section>
@@ -68,7 +76,9 @@ const SingleProduct = () => {
                   <span>{quantity}</span>
                   <button onClick={() => handleQuantity("add")}>+</button>
                 </div>
-                <button className="add-to-cart">Add to Cart</button>
+                <button onClick={handleAddToCart} className="add-to-cart">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
