@@ -2,45 +2,25 @@ import "./cart.css";
 import MeatData from "../../data/meats";
 import Button from "../../components/button/Button";
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-
-const cartItems = [
-  {
-    item: MeatData[0],
-    quantity: 1,
-  },
-  {
-    item: MeatData[1],
-    quantity: 1,
-  },
-  {
-    item: MeatData[2],
-    quantity: 2,
-  },
-];
+import {
+  removeProduct,
+  addQuantity,
+  decreaseQuantity,
+} from "../../redux/cartRedux";
 
 const Cart = () => {
-  const [cart, setCart] = useState(cartItems);
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.products);
 
   const handleQuantity = (operation, id) => {
-    const newCart = cart.map((product) => {
-      if (product.item.id === id) {
-        return operation === "add"
-          ? { ...product, quantity: product.quantity + 1 }
-          : {
-              ...product,
-              quantity:
-                product.quantity > 1 ? product.quantity - 1 : product.quantity,
-            };
-      }
-
-      return product;
-    });
-    setCart(newCart);
+    operation === "add"
+      ? dispatch(addQuantity(id))
+      : dispatch(decreaseQuantity(id));
   };
-  const removeProduct = (id) => {
-    const newCart = cart.filter((product) => product.item.id !== id);
-    setCart(newCart);
+  const remove = (id) => {
+    dispatch(removeProduct(id));
   };
 
   const subtotal = cart.reduce((prev, product) => {
@@ -90,7 +70,7 @@ const Cart = () => {
                         </button>
                       </div>
                       <span
-                        onClick={() => removeProduct(product.item.id)}
+                        onClick={() => remove(product.item.id)}
                         className="text-pri text-center"
                       >
                         Remove
