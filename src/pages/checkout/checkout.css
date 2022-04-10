@@ -46,3 +46,16 @@
   cursor: pointer;
   color: #000;
 }
+
+.checkout-page .payment .heading h2 {
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.checkout-page .payment .cards,
+.checkout-page .payment .cards .card {
+  gap: 40px;
+}
+.checkout-page .payment .cards .card img {
+  width: 250px;
+  height: 250px;
+}
