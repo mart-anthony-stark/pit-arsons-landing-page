@@ -105,3 +105,7 @@
 .single-product .suggestions .items .item span {
   font-size: 1.5rem;
 }
+button.already-added {
+  cursor: not-allowed !important;
+  background: rgb(199, 91, 91) !important;
+}
