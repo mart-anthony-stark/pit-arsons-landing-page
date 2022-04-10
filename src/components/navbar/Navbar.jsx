@@ -4,9 +4,11 @@ import { Badge } from "@material-ui/core";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { useState } from "react";
 import "./navbar.css";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
-  const [quantity, setQuantity] = useState(1);
+  const quantity = useSelector((state) => state.cart.products.length);
+
   return (
     <nav>
       <img className="logo" src={logo} alt="" />
