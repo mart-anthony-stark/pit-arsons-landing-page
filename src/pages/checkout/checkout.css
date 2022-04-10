@@ -51,11 +51,15 @@
   font-weight: 500;
   margin-bottom: 50px;
 }
-.checkout-page .payment .cards,
-.checkout-page .payment .cards .card {
+.checkout-page .payment .cards {
   gap: 40px;
 }
+.checkout-page .payment .cards .card {
+  justify-content: space-between;
+  height: 450px;
+  text-align: center;
+}
 .checkout-page .payment .cards .card img {
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
 }
