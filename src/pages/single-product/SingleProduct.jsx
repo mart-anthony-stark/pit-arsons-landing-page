@@ -5,12 +5,13 @@ import MeatsData from "../../data/meats";
 import b1 from "/src/images/home/angus-smoked-beef.jpg";
 import o1 from "/src/images/Meats-Others/_salmon.jpg";
 import c1 from "/src/images/home/whole-smoked-chicken.jpg";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../redux/cartRedux";
 
 const SingleProduct = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const products = useSelector((state) => state.cart.products);
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
 
@@ -46,9 +47,13 @@ const SingleProduct = () => {
         setQuantity(quantity + 1);
         break;
       case "minus":
-        if (quantity > 0) setQuantity(quantity - 1);
+        if (quantity > 1) setQuantity(quantity - 1);
         break;
     }
+  };
+
+  const alreadyInCart = () => {
+    return products.find((product) => product.item.id === item.id);
   };
 
   const handleAddToCart = () => {
@@ -76,8 +81,14 @@ const SingleProduct = () => {
                   <span>{quantity}</span>
                   <button onClick={() => handleQuantity("add")}>+</button>
                 </div>
-                <button onClick={handleAddToCart} className="add-to-cart">
-                  Add to Cart
+                <button
+                  onClick={handleAddToCart}
+                  disabled={alreadyInCart()}
+                  className={`add-to-cart ${
+                    alreadyInCart() && "already-added"
+                  }`}
+                >
+                  {alreadyInCart() ? "Already in the Cart" : "Add to Cart"}
                 </button>
               </div>
             </div>
