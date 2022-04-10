@@ -33,3 +33,6 @@
 .faqs .items .item .answer .grp {
   margin-top: 20px;
 }
+.faqs .items .item .answer p {
+  line-height: 25px;
+}
