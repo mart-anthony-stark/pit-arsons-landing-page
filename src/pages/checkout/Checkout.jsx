@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Button from "../../components/button/Button";
 import Instructions from "./instructions/Instructions";
 import Information from "./information/Information";
+import Payment from "./payment/Payment";
 
 const Checkout = () => {
   const [currentStep, setCurrentStep] = useState("");
@@ -25,6 +26,7 @@ const Checkout = () => {
         <div className="container">
           {currentStep === "instructions" && <Instructions />}
           {currentStep === "information" && <Information />}
+          {currentStep === "payment" && <Payment />}
         </div>
       </section>
     </div>
