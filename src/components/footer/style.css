@@ -41,3 +41,8 @@ footer .links.newsletter .email-input button {
   background: #877070;
   color: #fff;
 }
+
+footer a {
+  all: unset;
+  cursor: pointer;
+}
