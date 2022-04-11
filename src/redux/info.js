@@ -12,6 +12,7 @@ const infoSlice = createSlice({
       gender: "",
       age: 0,
     },
+    deliveryMethod: "",
   },
   reducers: {
     editCustomer: (state, action) => {
@@ -20,8 +21,14 @@ const infoSlice = createSlice({
     setInstructions: (state, action) => {
       state.instructions = action.payload;
     },
+
+    setdeliveryMethod: (state, action) => {
+      state.deliveryMethod =
+        action.payload === "deliver" ? "deliver" : "collect";
+    },
   },
 });
 
-export const { editCustomer, setInstructions } = infoSlice.actions;
+export const { editCustomer, setInstructions, setdeliveryMethod } =
+  infoSlice.actions;
 export default infoSlice.reducer;
