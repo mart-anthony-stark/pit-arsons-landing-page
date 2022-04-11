@@ -5,25 +5,27 @@ import ProductCard from "../../components/product-card/ProductCard";
 import OrderProcess from "./order-process/OrderProcess";
 
 // import bestseller1 from
-import b1 from "/src/images/home/angus-smoked-beef.jpg";
-import b2 from "/src/images/home/smoked-pork-ribs.jpg";
-import b3 from "/src/images/home/whole-smoked-chicken.jpg";
 
 const bestSellers = [
   {
+    id: 15,
     name: "USDA Angus Smoked Beef Belly",
     price: 500,
-    img: b1,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/home/angus-smoked-beef.jpg?raw=true",
   },
   {
+    id: 16,
     name: "Smoked Pork Ribs",
     price: 1300,
-    img: b2,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/home/smoked-pork-ribs.jpg?raw=true",
   },
   {
+    id: 2,
     name: "Whole Smoked Chicken Peri-peri",
+    category: "Chicken",
     price: 350,
-    img: b3,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-Chicken/whole%20smoked%20chicken.jpg?raw=true",
+    description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
 ];
 
