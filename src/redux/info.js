@@ -25,6 +25,7 @@ const infoSlice = createSlice({
       country: "",
       zip_code: "",
     },
+    paymentMethod: "",
   },
   reducers: {
     editCustomer: (state, action) => {
@@ -50,6 +51,10 @@ const infoSlice = createSlice({
     setDeliveryAddress: (state, action) => {
       state.deliveryAddress = action.payload;
     },
+
+    setPaymentMethod: (state, action) => {
+      state.paymentMethod = action.payload;
+    },
   },
 });
 
@@ -60,5 +65,6 @@ export const {
   setCourier,
   setDeliveryDateTime,
   setDeliveryAddress,
+  setPaymentMethod,
 } = infoSlice.actions;
 export default infoSlice.reducer;
