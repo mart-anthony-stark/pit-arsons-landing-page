@@ -1,25 +1,10 @@
-import c1 from "/src/images/Meats-Chicken/halfsmoked-chicken.jpg";
-import c2 from "/src/images/Meats-Chicken/whole smoked chicken.jpg";
-import p1 from "/src/images/Meats-Pork/pork ribs.jpg";
-import s1 from "/src/images/Meats-Sausage/sausage 4.jpg";
-import s2 from "/src/images/Meats-Sausage/sausage 8.jpg";
-import b1 from "/src/images/Meats-AngusBeef/angus-250.jpg";
-import b2 from "/src/images/Meats-AngusBeef/angus-500.jpg";
-import b3 from "/src/images/Meats-AngusBeef/angus-1kg.jpg";
-import g1 from "/src/images/Meats-GiftBox/token box.jpg";
-import g2 from "/src/images/Meats-GiftBox/black box.jpg";
-import o1 from "/src/images/Meats-Others/_salmon.jpg";
-import o2 from "/src/images/Meats-Others/chili con carne.jpg";
-import o3 from "/src/images/Meats-Others/bbq sauce.jpg";
-import o4 from "/src/images/Meats-Others/extra hot bbq.jpg";
-
 export default [
   {
     id: 1,
     name: "Half Smoked Chicken Peri-peri",
     category: "Chicken",
     price: 350,
-    img: c1,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-Chicken/halfsmoked-chicken.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -27,7 +12,7 @@ export default [
     name: "Whole Smoked Chicken Peri-peri",
     category: "Chicken",
     price: 600,
-    img: c2,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-Chicken/whole%20smoked%20chicken.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -35,7 +20,7 @@ export default [
     name: "Smoked Pork Ribs",
     category: "Pork",
     price: 1300,
-    img: p1,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-Pork/pork%20ribs.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -43,7 +28,7 @@ export default [
     name: "4's Homemade Smoked Beef Sausage",
     category: "Sausage",
     price: 380,
-    img: s1,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-Sausage/sausage%204.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -51,7 +36,7 @@ export default [
     name: "8's Homemade Smoked Beef Sausage",
     category: "Sausage",
     price: 750,
-    img: s2,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-Sausage/sausage%208.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -59,7 +44,7 @@ export default [
     name: "250g USDA Angus Smoked Beef Belly",
     category: "Smoke U.S. Angus Beef",
     price: 500,
-    img: b1,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-AngusBeef/angus-250.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -67,7 +52,7 @@ export default [
     name: "500g USDA Angus Smoked Beef Belly",
     category: "Smoke U.S. Angus Beef",
     price: 500,
-    img: b2,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-AngusBeef/angus-500.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -75,7 +60,7 @@ export default [
     name: "1kg USDA Angus Smoked Beef Belly",
     category: "Smoke U.S. Angus Beef",
     price: 500,
-    img: b3,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-AngusBeef/angus-1kg.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -83,7 +68,7 @@ export default [
     name: "Token Box",
     category: "Gift Box",
     price: 2950,
-    img: g1,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-GiftBox/token%20box.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -91,7 +76,7 @@ export default [
     name: "Black Box",
     category: "Gift Box",
     price: 4300,
-    img: g2,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-GiftBox/black%20box.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -99,7 +84,7 @@ export default [
     name: "Smoked Salmon",
     category: "Others",
     price: 580,
-    img: o1,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-Others/_salmon.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -107,7 +92,7 @@ export default [
     name: "Chili con Carne",
     category: "Others",
     price: 350,
-    img: o2,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-Others/chili%20con%20carne.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -115,7 +100,7 @@ export default [
     name: "Original B-B-Q Sauce",
     category: "Others",
     price: 150,
-    img: o3,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-Others/bbq%20sauce.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
   {
@@ -123,7 +108,7 @@ export default [
     name: "Extra Hot B-B-Q Sauce",
     category: "Others",
     price: 150,
-    img: o4,
+    img: "https://github.com/mart-anthony-stark/pit-arsons-landing-page/blob/main/src/images/Meats-Others/extra%20hot%20bbq.jpg?raw=true",
     description: "Slabs of pork ribs infused with an authentic smokey flavor.",
   },
 ];
