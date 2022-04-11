@@ -7,9 +7,24 @@ import { Link } from "react-router-dom";
 
 import Deliver from "./Deliver";
 import Collect from "./Collect";
+import { useDispatch, useSelector } from "react-redux";
+
+import { editCustomer, setdeliveryMethod } from "../../../redux/info";
 
 const Information = () => {
-  const [deliveryMethod, setDeliveryMethod] = useState("deliver");
+  const customerInfo = useSelector((state) => state.information.customer);
+  const deliveryMethod = useSelector(
+    (state) => state.information.deliveryMethod
+  );
+  const dispatch = useDispatch();
+
+  const handleDeliveryChange = (e) => {
+    dispatch(setdeliveryMethod(e.target.value));
+  };
+
+  const handleGenderChange = (e) => {
+    dispatch(editCustomer({ ...customerInfo, gender: e.target.value }));
+  };
 
   return (
     <div className="information">
@@ -18,12 +33,48 @@ const Information = () => {
       <div className="top center">
         <div className="center-self">
           <div className="two-cols">
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
+            <input
+              type="text"
+              placeholder="First Name"
+              value={customerInfo.firstname}
+              onChange={(e) =>
+                dispatch(
+                  editCustomer({ ...customerInfo, firstname: e.target.value })
+                )
+              }
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              value={customerInfo.lastname}
+              onChange={(e) =>
+                dispatch(
+                  editCustomer({ ...customerInfo, lastname: e.target.value })
+                )
+              }
+            />
           </div>
           <div className="two-cols">
-            <input type="text" placeholder="Mobile Phone Number" />
-            <input type="email" placeholder="Email Address" />
+            <input
+              type="text"
+              placeholder="Mobile Phone Number"
+              value={customerInfo.mobile}
+              onChange={(e) =>
+                dispatch(
+                  editCustomer({ ...customerInfo, mobile: e.target.value })
+                )
+              }
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              value={customerInfo.email}
+              onChange={(e) =>
+                dispatch(
+                  editCustomer({ ...customerInfo, email: e.target.value })
+                )
+              }
+            />
           </div>
           <div className="two-cols">
             <div className="gender">
@@ -35,11 +86,20 @@ const Information = () => {
                     name="gender"
                     id="female"
                     value="female"
+                    onChange={handleGenderChange}
+                    checked={customerInfo.gender === "female"}
                   />
                   <label htmlFor="female">Female</label>
                 </div>
                 <div className="grp">
-                  <input type="radio" name="gender" id="male" value="male" />
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="male"
+                    value="male"
+                    onChange={handleGenderChange}
+                    checked={customerInfo.gender === "male"}
+                  />
                   <label htmlFor="male">Male</label>
                 </div>
                 <div className="grp">
@@ -48,12 +108,21 @@ const Information = () => {
                     name="gender"
                     id="others"
                     value="others"
+                    onChange={handleGenderChange}
+                    checked={customerInfo.gender === "others"}
                   />
                   <label htmlFor="others">Others</label>
                 </div>
               </div>
             </div>
-            <input type="number" placeholder="Age" />
+            <input
+              type="number"
+              placeholder="Age"
+              value={customerInfo.age}
+              onChange={(e) =>
+                dispatch(editCustomer({ ...customerInfo, age: e.target.value }))
+              }
+            />
           </div>
         </div>
       </div>
@@ -67,7 +136,7 @@ const Information = () => {
             name="delivery-method"
             id="deliver"
             value="deliver"
-            onChange={(e) => setDeliveryMethod("deliver")}
+            onChange={handleDeliveryChange}
             checked={deliveryMethod === "deliver"}
           />
           <label htmlFor="deliver">
@@ -81,7 +150,7 @@ const Information = () => {
             name="delivery-method"
             id="collect"
             value="collect"
-            onChange={(e) => setDeliveryMethod("collect")}
+            onChange={handleDeliveryChange}
             checked={deliveryMethod === "collect"}
           />
           <label htmlFor="collect">
