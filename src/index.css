@@ -40,3 +40,8 @@ a {
   color: #000;
   text-decoration: none;
 }
+
+button.already-added {
+  cursor: not-allowed !important;
+  background: rgb(199, 91, 91) !important;
+}
