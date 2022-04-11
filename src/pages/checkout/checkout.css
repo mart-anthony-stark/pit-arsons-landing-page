@@ -63,3 +63,6 @@
   width: 230px;
   height: 230px;
 }
+.checkout-page .payment .cards .card button {
+  width: 100%;
+}
