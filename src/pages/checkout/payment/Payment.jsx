@@ -3,8 +3,17 @@ import COD from "../../../images/Bank Logos/COD.png";
 import BPI from "../../../images/Bank Logos/bpi-logo.jpg";
 import BDO from "../../../images/Bank Logos/bdo-logo.png";
 import Button from "../../../components/button/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { setPaymentMethod } from "../../../redux/info";
 
 const Payment = () => {
+  const dispatch = useDispatch();
+  const paymentMethod = useSelector((state) => state.information.paymentMethod);
+
+  const handleClickPayment = (method) => {
+    dispatch(setPaymentMethod(method));
+  };
+
   return (
     <div className="payment">
       <div className="heading center col">
@@ -18,7 +27,9 @@ const Payment = () => {
         <div className="card center col">
           <img src={Gcash} alt="" />
           <span>JOHN PAUL A. 09175134495</span>
-          <Button>Select Payment Option</Button>
+          <Button onClick={() => handleClickPayment("gcash")}>
+            {paymentMethod === "gcash" ? "Selected" : "Select Payment Option"}
+          </Button>
         </div>
         <div className="card center col">
           <img src={BPI} alt="" />
@@ -30,7 +41,9 @@ const Payment = () => {
             Savings Account
           </span>
           <span>JOHN PAUL A. 09175134495</span>
-          <Button>Select Payment Option</Button>
+          <Button onClick={() => handleClickPayment("bpi")}>
+            {paymentMethod === "bpi" ? "Selected" : "Select Payment Option"}
+          </Button>
         </div>
         <div className="card center col">
           <img src={BDO} alt="" />
@@ -41,12 +54,16 @@ const Payment = () => {
             <br />
             Savings Account
           </span>
-          <Button>Select Payment Option</Button>
+          <Button onClick={() => handleClickPayment("bdo")}>
+            {paymentMethod === "bdo" ? "Selected" : "Select Payment Option"}
+          </Button>
         </div>
         <div className="card center col">
           <img src={COD} alt="" />
           <h3>CASH ON DELIVERY / PICK-UP</h3>
-          <Button>Select Payment Option</Button>
+          <Button onClick={() => handleClickPayment("cod")}>
+            {paymentMethod === "cod" ? "Selected" : "Select Payment Option"}
+          </Button>
         </div>
       </div>
     </div>
