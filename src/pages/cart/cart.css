@@ -45,3 +45,6 @@
 .cart-page a {
   all: unset;
 }
+#root > div > div.cart-page > section > h1 {
+  height: 300px;
+}
