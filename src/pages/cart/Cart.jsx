@@ -3,7 +3,8 @@ import MeatData from "../../data/meats";
 import Button from "../../components/button/Button";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 import {
   removeProduct,
   addQuantity,
@@ -13,6 +14,7 @@ import {
 const Cart = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.products);
+  const navigate = useNavigate();
 
   const handleQuantity = (operation, id) => {
     operation === "add"
@@ -26,6 +28,12 @@ const Cart = () => {
   const subtotal = cart.reduce((prev, product) => {
     return (prev += product.item.price * product.quantity);
   }, 0);
+
+  const handleCheckoutBtn = () => {
+    if (cart.length !== 0) return navigate("/checkout/instructions");
+
+    toast("You have no products to checkout");
+  };
 
   return (
     <div className="cart-page">
@@ -95,12 +103,11 @@ const Cart = () => {
             </tr>
           </tbody>
         </table>
+        {cart.length === 0 && <h1 className="center">No items in cart</h1>}
 
         <div className="buttons flex-end">
           <Button>Continue Shopping</Button>
-          <Button>
-            <Link to="/checkout/instructions">Checkout</Link>
-          </Button>
+          <Button onClick={handleCheckoutBtn}>Checkout</Button>
         </div>
       </section>
     </div>
