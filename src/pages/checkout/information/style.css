@@ -97,7 +97,7 @@
   max-width: 620px;
 }
 
-.checkout-page .information input[type="date"] {
+.checkout-page .information input[type="datetime-local"] {
   padding: 10px;
   max-width: 300px;
   width: 100%;
