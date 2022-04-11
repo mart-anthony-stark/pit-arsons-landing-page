@@ -10,9 +10,21 @@ const infoSlice = createSlice({
       mobile: "",
       email: "",
       gender: "",
-      age: 0,
+      age: null,
     },
     deliveryMethod: "",
+    courier: "",
+    deliveryDateTime: "",
+    deliveryAddress: {
+      firstname: "",
+      lastname: "",
+      street: "",
+      brgy: "",
+      city: "",
+      region: "",
+      country: "",
+      zip_code: "",
+    },
   },
   reducers: {
     editCustomer: (state, action) => {
@@ -26,9 +38,27 @@ const infoSlice = createSlice({
       state.deliveryMethod =
         action.payload === "deliver" ? "deliver" : "collect";
     },
+
+    setCourier: (state, action) => {
+      state.courier = action.payload;
+    },
+
+    setDeliveryDateTime: (state, action) => {
+      state.deliveryDateTime = action.payload;
+    },
+
+    setDeliveryAddress: (state, action) => {
+      state.deliveryAddress = action.payload;
+    },
   },
 });
 
-export const { editCustomer, setInstructions, setdeliveryMethod } =
-  infoSlice.actions;
+export const {
+  editCustomer,
+  setInstructions,
+  setdeliveryMethod,
+  setCourier,
+  setDeliveryDateTime,
+  setDeliveryAddress,
+} = infoSlice.actions;
 export default infoSlice.reducer;
