@@ -1,6 +1,19 @@
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct } from "../../redux/cartRedux";
 import "./card.css";
 
 const ProductCard = ({ dish }) => {
+  const cart = useSelector((state) => state.cart.products);
+  const dispatch = useDispatch();
+
+  const handleAddItem = () => {
+    dispatch(addProduct({ item: dish, quantity: 1 }));
+  };
+
+  const alreadyInCart = () => {
+    return cart.find((product) => product.item.id === dish.id);
+  };
+
   return (
     <div className="product-card">
       <img src={dish.img} alt="" />
@@ -13,7 +26,12 @@ const ProductCard = ({ dish }) => {
         </div>
       </div>
 
-      <button className="cta">Add to Cart</button>
+      <button
+        className={`cta ${alreadyInCart() && "already-added"}`}
+        onClick={handleAddItem}
+      >
+        {alreadyInCart() ? "Already in the Cart" : "Add to Cart"}
+      </button>
     </div>
   );
 };
