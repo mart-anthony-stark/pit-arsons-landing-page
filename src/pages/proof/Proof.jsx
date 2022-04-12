@@ -3,6 +3,7 @@ import "./proof.css";
 import Dropzone, { useDropzone } from "react-dropzone";
 import CloudUploadOutlinedIcon from "@mui/icons-material/CloudUploadOutlined";
 import Button from "../../components/button/Button";
+import toast from "react-hot-toast";
 
 const Proof = () => {
   const [paymentImg, setPaymentImg] = useState(null);
@@ -30,6 +31,10 @@ const Proof = () => {
     console.log({ fileObj });
 
     setIdImg(fileObj);
+  };
+
+  const handleFinish = () => {
+    toast.success("Your order has been successfully placed");
   };
 
   return (
@@ -95,7 +100,7 @@ const Proof = () => {
           </h1>
         </div>
         <div className="bottom flex-end">
-          <Button>Finish</Button>
+          <Button onClick={handleFinish}>Finish</Button>
         </div>
       </section>
     </div>
