@@ -16,8 +16,9 @@ const FAQs = lazy(() => import("./pages/faqs/FAQs"));
 const ContactUs = lazy(() => import("./pages/contact-us/ContactUs"));
 const Cart = lazy(() => import("./pages/cart/Cart"));
 const Checkout = lazy(() => import("./pages/checkout/Checkout"));
+const Proof = lazy(() => import("./pages/proof/Proof"));
 
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -89,6 +90,14 @@ function App() {
             element={
               <Suspense fallback={<></>}>
                 <Checkout />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/proof-of-payment"
+            element={
+              <Suspense fallback={<></>}>
+                <Proof />
               </Suspense>
             }
           />
