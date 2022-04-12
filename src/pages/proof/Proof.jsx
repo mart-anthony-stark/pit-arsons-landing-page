@@ -35,6 +35,8 @@ const Proof = () => {
 
   const handleFinish = () => {
     toast.success("Your order has been successfully placed");
+    localStorage.clear();
+    setTimeout(() => (window.location = "/"), 3000);
   };
 
   return (
