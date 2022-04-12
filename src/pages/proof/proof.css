@@ -1,0 +1,52 @@
+#root > div > div.proof > section > label {
+  border: dashed 2px #000 !important;
+  height: 300px !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  display: flex !important;
+}
+div.proof section {
+  padding: 100px 50px 0 50px;
+}
+.proof .drag-container {
+  margin: 50px 50px;
+  /* max-width: 600px;
+  width: 100%; */
+}
+.proof .drag-container .dropzone {
+  padding: 20px;
+  min-height: 350px;
+  cursor: pointer;
+  border: 3px dashed gray;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+}
+.proof .drag-container .dropzone button {
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  background: gray;
+}
+h1.light {
+  font-weight: 300;
+}
+.proof img.preview {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.proof .confirm {
+  max-width: 500px;
+}
+.proof .bottom button {
+  width: 200px;
+  margin-top: 50px;
+}
