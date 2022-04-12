@@ -174,7 +174,9 @@ const Information = () => {
           Return to Special
           <br /> Instructions
         </Link>
-        <Button>Proceed to Payment</Button>
+        <Link to="/checkout/payment">
+          <Button>Proceed to Payment</Button>
+        </Link>
       </div>
     </div>
   );
