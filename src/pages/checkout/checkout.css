@@ -66,3 +66,62 @@
 .checkout-page .payment .cards .card button {
   width: 100%;
 }
+
+.checkout-page .payment .review-order {
+  margin-top: 50px;
+}
+
+.checkout-page .payment .review-order table {
+  border-collapse: collapse;
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
+}
+.checkout-page .payment .review-order table td {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+.checkout-page .payment .review-order table td h1 {
+  margin: unset;
+}
+
+div.checkout-page div.review-order table tbody tr.sub-total td:nth-child(2) {
+  text-align: end;
+}
+
+.checkout-page .payment .contact-details {
+  margin-top: 50px;
+  padding: 10px;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 5px;
+}
+
+.checkout-page .payment .contact-details .info {
+  max-width: 600px;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(202, 202, 202);
+}
+.checkout-page .payment .contact-details .info:last-child {
+  border: none;
+}
+.checkout-page .payment .contact-details .info span {
+  color: gray;
+}
+.checkout-page .payment .contact-details .info input {
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: gray;
+}
+.checkout-page .payment .contact-details .info span.btn {
+  color: var(--c-accent);
+  cursor: pointer;
+}
+.checkout-page .payment .buttons {
+  margin-top: 50px;
+}
