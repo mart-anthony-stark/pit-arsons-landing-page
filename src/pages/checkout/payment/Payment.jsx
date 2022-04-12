@@ -132,7 +132,9 @@ const Payment = () => {
 
       <div className="buttons flex-end center">
         <Link to="/checkout/information">Return to Information</Link>
-        <Button>Place Order</Button>
+        <Link to="/proof-of-payment">
+          <Button>Place Order</Button>
+        </Link>
       </div>
     </div>
   );
