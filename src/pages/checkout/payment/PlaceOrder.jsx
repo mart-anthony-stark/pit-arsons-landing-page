@@ -1,16 +1,35 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import validator from "validator";
+import { setOrder } from "../../../redux/order";
+import { useNavigate } from "react-router-dom";
 
 const PlaceOrder = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const information = useSelector((state) => state.information);
   const deliveryAddress = information.deliveryAddress;
   const customer = information.customer;
   const instructions = information.instructions;
   const cart = useSelector((state) => state.cart.products);
+  const order = useSelector((state) => state.order);
 
-  const sendOrderForm = (body) => {
-    console.log("POST FORM");
+  const sendOrderForm = async (body) => {
+    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/order`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      dispatch(setOrder(data.order));
+      toast.error("Order successfully placed");
+      navigate("/proof-of-payment");
+    } else {
+      toast.error("Something went wrong");
+    }
   };
 
   const validInfo = () => {
@@ -68,9 +87,6 @@ const PlaceOrder = () => {
   };
 
   const handlePlaceOrder = () => {
-    // console.log("/proof-of-payment");
-    console.log(information);
-
     let validForms = true;
     const body = {};
     if (!validInfo()) validForms = false;
@@ -86,10 +102,12 @@ const PlaceOrder = () => {
     body.instructions = instructions;
     body.deliveryMethod = information.deliveryMethod;
 
-    if (information.deliveryMethod == "deliver")
+    if (information.deliveryMethod == "deliver") {
       body.courier = information.courier;
-    console.log(body);
-    if (validForms) sendOrderForm();
+      body.deliveryDateAndTime = information.deliveryDateTime;
+    }
+
+    if (validForms) sendOrderForm(body);
   };
 
   return { handlePlaceOrder };
