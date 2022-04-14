@@ -7,8 +7,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { setPaymentMethod } from "../../../redux/info";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PlaceOrder from "./PlaceOrder";
 
 const Payment = () => {
+  const { handlePlaceOrder } = PlaceOrder();
+
   const [disabledChangeContact, setDisabledChangeContact] = useState(true);
   const dispatch = useDispatch();
   const paymentMethod = useSelector((state) => state.information.paymentMethod);
@@ -132,9 +135,7 @@ const Payment = () => {
 
       <div className="buttons flex-end center">
         <Link to="/checkout/information">Return to Information</Link>
-        <Link to="/proof-of-payment">
-          <Button>Place Order</Button>
-        </Link>
+        <Button onClick={handlePlaceOrder}>Place Order</Button>
       </div>
     </div>
   );
