@@ -25,7 +25,7 @@ const PlaceOrder = () => {
 
     if (data.success) {
       dispatch(setOrder(data.order));
-      toast.error("Order successfully placed");
+      toast.success("Order successfully placed");
       navigate("/proof-of-payment");
     } else {
       toast.error("Something went wrong");
