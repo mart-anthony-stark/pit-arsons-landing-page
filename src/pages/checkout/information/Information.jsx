@@ -10,6 +10,7 @@ import Collect from "./Collect";
 import { useDispatch, useSelector } from "react-redux";
 
 import { editCustomer, setdeliveryMethod } from "../../../redux/info";
+import useValidate from "./hooks/useValidate";
 
 const Information = () => {
   const customerInfo = useSelector((state) => state.information.customer);
@@ -25,6 +26,8 @@ const Information = () => {
   const handleGenderChange = (e) => {
     dispatch(editCustomer({ ...customerInfo, gender: e.target.value }));
   };
+
+  const { validate } = useValidate();
 
   return (
     <div className="information">
@@ -174,9 +177,7 @@ const Information = () => {
           Return to Special
           <br /> Instructions
         </Link>
-        <Link to="/checkout/payment">
-          <Button>Proceed to Payment</Button>
-        </Link>
+        <Button onClick={validate}>Proceed to Payment</Button>
       </div>
     </div>
   );
