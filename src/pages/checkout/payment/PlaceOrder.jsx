@@ -15,6 +15,7 @@ const PlaceOrder = () => {
   const order = useSelector((state) => state.order);
 
   const sendOrderForm = async (body) => {
+    const loader = toast.loading("Processing your order");
     const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/order`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -22,6 +23,7 @@ const PlaceOrder = () => {
     });
 
     const data = await res.json();
+    toast.dismiss(loader);
 
     if (data.success) {
       dispatch(setOrder(data.order));
