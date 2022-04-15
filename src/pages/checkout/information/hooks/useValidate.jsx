@@ -40,7 +40,6 @@ const useValidate = () => {
     return valid;
   };
   const validate = () => {
-    console.log(customer);
     if (isValid()) navigate("/checkout/payment");
   };
   return { validate };
