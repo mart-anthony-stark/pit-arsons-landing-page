@@ -11,6 +11,7 @@ const PlaceOrder = () => {
   const deliveryAddress = information.deliveryAddress;
   const customer = information.customer;
   const instructions = information.instructions;
+  const paymentMethod = information.paymentMethod;
   const cart = useSelector((state) => state.cart.products);
   const order = useSelector((state) => state.order);
 
@@ -63,6 +64,10 @@ const PlaceOrder = () => {
       valid = false;
       toast.error("Mobile Number is required");
     }
+    if (validator.isEmpty(paymentMethod)) {
+      valid = false;
+      toast.error("Payment method is required");
+    }
 
     return valid;
   };
@@ -103,6 +108,7 @@ const PlaceOrder = () => {
     }`;
     body.instructions = instructions;
     body.deliveryMethod = information.deliveryMethod;
+    body.paymentMethod = paymentMethod;
 
     if (information.deliveryMethod == "deliver") {
       body.courier = information.courier;
