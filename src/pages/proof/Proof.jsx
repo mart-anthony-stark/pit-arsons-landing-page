@@ -4,11 +4,16 @@ import Dropzone, { useDropzone } from "react-dropzone";
 import CloudUploadOutlinedIcon from "@mui/icons-material/CloudUploadOutlined";
 import Button from "../../components/button/Button";
 import toast from "react-hot-toast";
+import { useSelector } from "react-redux";
 
 const Proof = () => {
   const [paymentImg, setPaymentImg] = useState(null);
   const [idImg, setIdImg] = useState(null);
+  const [paymentFile, setPaymentFile] = useState(null);
+  const [idFile, setidFile] = useState(null);
 
+  const orderId = useSelector((state) => state.order.details._id);
+  console.log({ orderId });
   const handleProofDrop = (accepted) => {
     const file = accepted[0];
     console.log({ file });
@@ -17,7 +22,7 @@ const Proof = () => {
     });
 
     console.log({ fileObj });
-
+    setPaymentFile(file);
     setPaymentImg(fileObj);
   };
 
@@ -29,14 +34,30 @@ const Proof = () => {
     });
 
     console.log({ fileObj });
-
+    setidFile(file);
     setIdImg(fileObj);
   };
 
-  const handleFinish = () => {
-    toast.success("Your order is being processed");
-    localStorage.clear();
-    setTimeout(() => (window.location = "/"), 3000);
+  const handleFinish = async () => {
+    console.log({ paymentFile, idFile });
+    let body = new FormData();
+    body.append("order", orderId);
+    body.append("proof", paymentFile);
+    body.append("idCard", idFile);
+
+    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/payment`, {
+      method: "POST",
+      headers: {},
+      body,
+    });
+    const data = await res.json();
+    if (data.success) {
+      toast.success("Your order is being processed");
+      localStorage.clear();
+      setTimeout(() => (window.location = "/"), 3000);
+    } else {
+      toast.error("Something went wrong! Please try again later");
+    }
   };
 
   return (
