@@ -13,33 +13,27 @@ const Proof = () => {
   const [idFile, setidFile] = useState(null);
 
   const orderId = useSelector((state) => state.order.details._id);
-  console.log({ orderId });
   const handleProofDrop = (accepted) => {
     const file = accepted[0];
-    console.log({ file });
     const fileObj = Object.assign(file, {
       preview: URL.createObjectURL(file),
     });
 
-    console.log({ fileObj });
     setPaymentFile(file);
     setPaymentImg(fileObj);
   };
 
   const handleIDDrop = (accepted) => {
     const file = accepted[0];
-    console.log({ file });
     const fileObj = Object.assign(file, {
       preview: URL.createObjectURL(file),
     });
 
-    console.log({ fileObj });
     setidFile(file);
     setIdImg(fileObj);
   };
 
   const handleFinish = async () => {
-    console.log({ paymentFile, idFile });
     let body = new FormData();
     body.append("order", orderId);
     body.append("proof", paymentFile);
