@@ -1,8 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../../../components/button/Button";
 import knife from "../../../images/home/hr-knife.png";
 
-
 const Welcome = () => {
+  const navigate = useNavigate();
   return (
     <div className="welcome">
       <img src={knife} alt="" />
@@ -17,7 +18,7 @@ const Welcome = () => {
         taste by delivering ready to eat, seasoned and marinated meats right to
         your doorstep.
       </p>
-      <Button>More About Us</Button>
+      <Button onClick={() => navigate("/about")}>More About Us</Button>
     </div>
   );
 };
