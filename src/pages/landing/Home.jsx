@@ -3,6 +3,7 @@ import Button from "../../components/button/Button";
 import Welcome from "./welcome/Welcome";
 import ProductCard from "../../components/product-card/ProductCard";
 import OrderProcess from "./order-process/OrderProcess";
+import { useNavigate } from "react-router-dom";
 
 // import bestseller1 from
 
@@ -30,13 +31,14 @@ const bestSellers = [
 ];
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="home">
       <div className="hero-section">
         <div className="banner">
           <h2>low and slow smoked meats</h2>
           <h1>DELIVERED RIGHT TO YOUR DOORSTEP.</h1>
-          <Button>SHOP NOW</Button>
+          <Button onClick={() => navigate("/meats/chicken")}>SHOP NOW</Button>
         </div>
 
         <Welcome />
