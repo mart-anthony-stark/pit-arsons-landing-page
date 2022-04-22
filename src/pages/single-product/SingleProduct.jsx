@@ -20,7 +20,7 @@ const SingleProduct = () => {
       category: "Chicken",
       description:
         "Slabs of pork ribs infused with an authentic smokey flavor.",
-      id: 1,
+      _id: 1,
       img: "/src/images/Meats-Chicken/half-smoked-chicken.JPG",
       name: "Half Smoked Chicken Peri-peri",
       price: 350,
@@ -58,6 +58,15 @@ const SingleProduct = () => {
     dispatch(addProduct({ item, quantity }));
   };
 
+  const hashCategories = {
+    chicken: "Chicken",
+    pork: "Pork",
+    sausage: "Sausage",
+    beef: "Beef",
+    giftBox: "GiftBox",
+    others: "Others",
+  };
+
   return (
     <div className="single-product">
       <section>
@@ -68,7 +77,7 @@ const SingleProduct = () => {
             <img src={item.coverImagePath} alt={item.name} />
             <div className="item-desc center col">
               <div className="top">
-                <h2>{item.category.toUpperCase()}</h2>
+                <h2>{hashCategories[item.category]}</h2>
                 <h1>{item.name}</h1>
                 <h1 className="price center">₱ {item.price}</h1>
               </div>
