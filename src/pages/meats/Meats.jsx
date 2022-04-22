@@ -9,8 +9,8 @@ const categories = [
   { name: "Chicken", link: "/meats/chicken" },
   { name: "Pork", link: "/meats/pork" },
   { name: "Sausage", link: "/meats/sausage" },
-  { name: "Smoked U.S. Angus Beef", link: "/meats/angus-beef" },
-  { name: "Gift Box", link: "/meats/gift-box" },
+  { name: "Smoked U.S. Angus Beef", link: "/meats/beef" },
+  { name: "Gift Box", link: "/meats/giftBox" },
   { name: "Others", link: "/meats/others" },
 ];
 
@@ -26,10 +26,9 @@ const Meats = () => {
   );
 
   const getAllMeats = async () => {
-    // const res = await fetch("/src/data/meats.json");
-    // const data = await res.json();
-    // setMeats(data);
-    setMeats(MeatsData);
+    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/product`);
+    const data = await res.json();
+    setMeats(data);
   };
 
   useEffect(() => {
@@ -42,8 +41,8 @@ const Meats = () => {
       chicken: "Chicken",
       pork: "Pork",
       sausage: "Sausage",
-      "angus-beef": "Smoke U.S. Angus Beef",
-      "gift-box": "Gift Box",
+      beef: "beef",
+      giftBox: "GiftBox",
       others: "Others",
     };
     setSelectedCategory(hashCategories[`${category}`]);
@@ -55,7 +54,7 @@ const Meats = () => {
         data={{
           topHeading: "SHOP. EAT. MEAT.",
           subHeading: "MEATS",
-          img: 'meats',
+          img: "meats",
         }}
       />
 
