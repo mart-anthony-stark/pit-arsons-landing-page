@@ -41,7 +41,7 @@ const Meats = () => {
       chicken: "Chicken",
       pork: "Pork",
       sausage: "Sausage",
-      beef: "beef",
+      beef: "Beef",
       giftBox: "GiftBox",
       others: "Others",
     };
