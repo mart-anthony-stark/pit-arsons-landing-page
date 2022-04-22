@@ -28,13 +28,11 @@ const SingleProduct = () => {
   ]);
 
   const getItem = async () => {
-    // const res = await fetch(`/src/data/meats.json`);
-    // const data = await res.json();
-
-    const i = MeatsData.find((d) => d.id == id);
-
-    if (!i) return navigate(-1);
-    setItem(i);
+    const res = await fetch(
+      `${import.meta.env.VITE_API_BASE_URL}/product/${id}`
+    );
+    const data = await res.json();
+    setItem(data);
   };
 
   useEffect(() => {
@@ -67,7 +65,7 @@ const SingleProduct = () => {
         <div className="content">
           <h2 onClick={() => navigate(-1)}>&lt; Go Back </h2>
           <div className="two-cols">
-            <img src={item.img} alt={item.name} />
+            <img src={item.coverImagePath} alt={item.name} />
             <div className="item-desc center col">
               <div className="top">
                 <h2>{item.category}</h2>
