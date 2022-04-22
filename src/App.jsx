@@ -1,10 +1,11 @@
-import { useState, lazy, Suspense } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Loader from "./components/loader/Loader";
+import { setProducts } from "./redux/productsRedux";
 
 // Pages
 const About = lazy(() => import("./pages/about/About"));
@@ -23,6 +24,15 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [meats, setMeats] = useState([]);
+  useEffect(() => {
+    const getItems = async () => {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/product`);
+      const data = await res.json();
+      setMeats(data);
+    };
+    getItems();
+  }, []);
 
   return (
     <div className="App">
@@ -58,7 +68,7 @@ function App() {
             path="/meats/:category"
             element={
               <Suspense fallback={<Loader />}>
-                <Meats />
+                <Meats meats={meats} setMeats={setMeats} />
               </Suspense>
             }
           />
