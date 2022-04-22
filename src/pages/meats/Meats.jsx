@@ -17,6 +17,7 @@ const categories = [
 const Meats = () => {
   const navigate = useNavigate();
   const [meats, setMeats] = useState([]);
+  const [loading, setLoading] = useState(true);
   let { category } = useParams();
 
   const [selectedCategory, setSelectedCategory] = useState("Chicken");
@@ -29,6 +30,7 @@ const Meats = () => {
     const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/product`);
     const data = await res.json();
     setMeats(data);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -77,6 +79,7 @@ const Meats = () => {
 
         <div className="items">
           <h1>{selectedCategory}</h1>
+          {loading && <h2>Loading...</h2>}
           {filteredItems.map((meat, i) => (
             <MeatItem key={i} item={meat} />
           ))}
