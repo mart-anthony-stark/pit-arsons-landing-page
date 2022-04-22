@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import Loader from "./components/loader/Loader";
 
 // Pages
 const About = lazy(() => import("./pages/about/About"));
@@ -32,7 +33,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Suspense fallback={<></>}>
+              <Suspense fallback={<Loader />}>
                 <Home />
               </Suspense>
             }
@@ -40,7 +41,7 @@ function App() {
           <Route
             path="/about"
             element={
-              <Suspense fallback={<></>}>
+              <Suspense fallback={<Loader />}>
                 <About />
               </Suspense>
             }
@@ -48,7 +49,7 @@ function App() {
           <Route
             path="/meats/item/:id"
             element={
-              <Suspense fallback={<></>}>
+              <Suspense fallback={<Loader />}>
                 <SingleProduct />
               </Suspense>
             }
@@ -56,7 +57,7 @@ function App() {
           <Route
             path="/meats/:category"
             element={
-              <Suspense fallback={<></>}>
+              <Suspense fallback={<Loader />}>
                 <Meats />
               </Suspense>
             }
@@ -64,7 +65,7 @@ function App() {
           <Route
             path="/faqs"
             element={
-              <Suspense fallback={<></>}>
+              <Suspense fallback={<Loader />}>
                 <FAQs />
               </Suspense>
             }
@@ -72,7 +73,7 @@ function App() {
           <Route
             path="/contact"
             element={
-              <Suspense fallback={<></>}>
+              <Suspense fallback={<Loader />}>
                 <ContactUs />
               </Suspense>
             }
@@ -80,7 +81,7 @@ function App() {
           <Route
             path="/cart"
             element={
-              <Suspense fallback={<></>}>
+              <Suspense fallback={<Loader />}>
                 <Cart />
               </Suspense>
             }
@@ -88,7 +89,7 @@ function App() {
           <Route
             path="/checkout/:step"
             element={
-              <Suspense fallback={<></>}>
+              <Suspense fallback={<Loader />}>
                 <Checkout />
               </Suspense>
             }
@@ -96,7 +97,7 @@ function App() {
           <Route
             path="/proof-of-payment"
             element={
-              <Suspense fallback={<></>}>
+              <Suspense fallback={<Loader />}>
                 <Proof />
               </Suspense>
             }
