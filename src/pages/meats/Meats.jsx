@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import SectionBanner from "../../components/section-banner/SectionBanner";
 import { useNavigate, useParams } from "react-router-dom";
 import MeatItem from "../../components/meat-item/MeatItem";
-import MeatsData from "../../data/meats";
+import { useDispatch, useSelector } from "react-redux";
 
 const categories = [
   { name: "Chicken", link: "/meats/chicken" },
@@ -14,9 +14,8 @@ const categories = [
   { name: "Others", link: "/meats/others" },
 ];
 
-const Meats = () => {
+const Meats = ({ meats, setMeats }) => {
   const navigate = useNavigate();
-  const [meats, setMeats] = useState([]);
   const [loading, setLoading] = useState(true);
   let { category } = useParams();
 
@@ -79,7 +78,7 @@ const Meats = () => {
 
         <div className="items">
           <h1>{selectedCategory}</h1>
-          {loading && <h2>Loading...</h2>}
+          {/* {loading && <h2>Loading...</h2>} */}
           {filteredItems.map((meat, i) => (
             <MeatItem key={i} item={meat} />
           ))}
