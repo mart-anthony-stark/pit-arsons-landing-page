@@ -68,7 +68,7 @@ const SingleProduct = () => {
             <img src={item.coverImagePath} alt={item.name} />
             <div className="item-desc center col">
               <div className="top">
-                <h2>{item.category}</h2>
+                <h2>{item.category.toUpperCase()}</h2>
                 <h1>{item.name}</h1>
                 <h1 className="price center">₱ {item.price}</h1>
               </div>
