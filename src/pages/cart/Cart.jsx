@@ -52,7 +52,10 @@ const Cart = () => {
               return (
                 <tr className="item" key={product.item.id}>
                   <td className="product">
-                    <img src={product.item.img} alt={product.item.name} />
+                    <img
+                      src={product.item.coverImagePath}
+                      alt={product.item.name}
+                    />
                     <h3>{product.item.name}</h3>
                   </td>
                   <td>
