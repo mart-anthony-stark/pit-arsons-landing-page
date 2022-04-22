@@ -5,11 +5,11 @@ import { useNavigate } from "react-router-dom";
 const MeatItem = ({ item }) => {
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate(`/meats/item/${item.id}`);
+    navigate(`/meats/item/${item._id}`);
   };
   return (
     <div className="meat-item">
-      <img src={item.img} alt="" />
+      <img src={item.coverImagePath} alt="" />
       <div className="desc">
         <div className="name">
           <h2>{item.name}</h2>
