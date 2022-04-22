@@ -12,8 +12,19 @@ const PlaceOrder = () => {
   const customer = information.customer;
   const instructions = information.instructions;
   const paymentMethod = information.paymentMethod;
-  const cart = useSelector((state) => state.cart.products);
+  const cart = useSelector((state) => state.cart.products).map((product) => {
+    return {
+      quantity: product.quantity,
+      item: {
+        _id: product.item._id,
+        name: product.item.name,
+        price: product.item.price,
+        category: product.item.category,
+      },
+    };
+  });
   const order = useSelector((state) => state.order);
+  console.log(cart);
 
   const sendOrderForm = async (body) => {
     const loader = toast.loading("Processing your order");
