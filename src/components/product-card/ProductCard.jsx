@@ -22,7 +22,13 @@ const ProductCard = ({ dish }) => {
 
         <div className="price">
           <span>Starting at</span>
-          <h2>₱{dish.price}</h2>
+          <h2>
+            ₱
+            {dish.price.toLocaleString("en-US", {
+              style: "decimal",
+              minimumFractionDigits: 2,
+            })}
+          </h2>
         </div>
       </div>
 
