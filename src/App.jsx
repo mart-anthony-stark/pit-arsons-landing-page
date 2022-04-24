@@ -60,7 +60,7 @@ function App() {
             path="/meats/item/:id"
             element={
               <Suspense fallback={<Loader />}>
-                <SingleProduct />
+                <SingleProduct meats={meats} />
               </Suspense>
             }
           />
