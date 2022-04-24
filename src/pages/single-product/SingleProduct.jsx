@@ -79,7 +79,13 @@ const SingleProduct = () => {
               <div className="top">
                 <h2>{hashCategories[item.category]}</h2>
                 <h1>{item.name}</h1>
-                <h1 className="price center">₱ {item.price}</h1>
+                <h1 className="price center">
+                  ₱{" "}
+                  {item.price.toLocaleString("en-US", {
+                    style: "decimal",
+                    minimumFractionDigits: 2,
+                  })}
+                </h1>
               </div>
 
               <div className="bottom">
@@ -113,17 +119,35 @@ const SingleProduct = () => {
             <div className="item">
               <img src={b1} alt="" />
               <h2 className="name">1kg USDA Angus Smoked Beef Belly</h2>
-              <span>₱ 1900</span>
+              <span>
+                ₱{" "}
+                {(1900).toLocaleString("en-US", {
+                  style: "decimal",
+                  minimumFractionDigits: 2,
+                })}
+              </span>
             </div>
             <div className="item">
               <img src={o1} alt="" />
               <h2 className="name">Smoked Salmon</h2>
-              <span>₱ 580</span>
+              <span>
+                ₱{" "}
+                {(580).toLocaleString("en-US", {
+                  style: "decimal",
+                  minimumFractionDigits: 2,
+                })}
+              </span>
             </div>
             <div className="item">
               <img src={c1} alt="" />
               <h2 className="name">Whole Smoked Chicken Peri-peri</h2>
-              <span>₱ 600</span>
+              <span>
+                ₱{" "}
+                {(600).toLocaleString("en-US", {
+                  style: "decimal",
+                  minimumFractionDigits: 2,
+                })}
+              </span>
             </div>
           </div>
         </div>

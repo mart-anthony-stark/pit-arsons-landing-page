@@ -71,13 +71,6 @@ const Payment = () => {
             {paymentMethod === "bdo" ? "Selected" : "Select Payment Option"}
           </Button>
         </div>
-        <div className="card center col">
-          <img src={COD} alt="" />
-          <h3>CASH ON DELIVERY / PICK-UP</h3>
-          <Button onClick={() => handleClickPayment("cod")}>
-            {paymentMethod === "cod" ? "Selected" : "Select Payment Option"}
-          </Button>
-        </div>
       </div>
 
       <div className="review-order">
@@ -87,18 +80,33 @@ const Payment = () => {
             {cart.map((product) => (
               <tr key={product.item.id}>
                 <td>
-                  <h1>{product.quantity}x</h1>
+                  <span>{product.quantity}x</span>
                 </td>
                 <td>{product.item.name}</td>
-                <td>₱ {product.quantity * product.item.price}</td>
+                <td>
+                  <h2>
+                    ₱{" "}
+                    {(product.quantity * product.item.price).toLocaleString(
+                      "en-US",
+                      { style: "decimal", minimumFractionDigits: 2 }
+                    )}
+                  </h2>
+                </td>
               </tr>
             ))}
             <tr className="sub-total">
               <td></td>
               <td>Subtotal:</td>
               <td>
-                ₱{" "}
-                {cart.reduce((agg, i) => (agg += i.quantity * i.item.price), 0)}
+                <h2>
+                  ₱{" "}
+                  {cart
+                    .reduce((agg, i) => (agg += i.quantity * i.item.price), 0)
+                    .toLocaleString("en-US", {
+                      style: "decimal",
+                      minimumFractionDigits: 2,
+                    })}
+                </h2>
               </td>
             </tr>
           </tbody>
