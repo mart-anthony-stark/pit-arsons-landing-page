@@ -59,7 +59,13 @@ const Cart = () => {
                     <h3>{product.item.name}</h3>
                   </td>
                   <td>
-                    <h3>₱ {product.item.price}</h3>
+                    <h3>
+                      ₱{" "}
+                      {product.item.price.toLocaleString("en-US", {
+                        style: "decimal",
+                        minimumFractionDigits: 2,
+                      })}
+                    </h3>
                   </td>
                   <td className="quantity">
                     <div className="center col">
@@ -89,7 +95,13 @@ const Cart = () => {
                     </div>
                   </td>
                   <td>
-                    <h3>₱ {product.quantity * product.item.price}</h3>
+                    <h2>
+                      ₱{" "}
+                      {(product.quantity * product.item.price).toLocaleString(
+                        "en-US",
+                        { style: "decimal", minimumFractionDigits: 2 }
+                      )}
+                    </h2>
                   </td>
                 </tr>
               );
@@ -101,7 +113,13 @@ const Cart = () => {
                 <h2 className="text-center">Subtotal</h2>
               </td>
               <td>
-                <h2>₱ {subtotal}</h2>
+                <h2>
+                  ₱{" "}
+                  {subtotal.toLocaleString("en-US", {
+                    style: "decimal",
+                    minimumFractionDigits: 2,
+                  })}
+                </h2>
               </td>
             </tr>
           </tbody>
