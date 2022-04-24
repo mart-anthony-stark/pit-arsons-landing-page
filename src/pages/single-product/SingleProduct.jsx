@@ -8,7 +8,7 @@ import c1 from "/src/images/home/whole-smoked-chicken.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../redux/cartRedux";
 
-const SingleProduct = () => {
+const SingleProduct = ({ meats }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const products = useSelector((state) => state.cart.products);
@@ -28,10 +28,11 @@ const SingleProduct = () => {
   ]);
 
   const getItem = async () => {
-    const res = await fetch(
-      `${import.meta.env.VITE_API_BASE_URL}/product/${id}`
-    );
-    const data = await res.json();
+    const data = meats.find((m) => m._id === id);
+    data.price = data.price.toLocaleString("en-US", {
+      style: "decimal",
+      minimumFractionDigits: 2,
+    });
     setItem(data);
   };
 
@@ -79,13 +80,7 @@ const SingleProduct = () => {
               <div className="top">
                 <h2>{hashCategories[item.category]}</h2>
                 <h1>{item.name}</h1>
-                <h1 className="price center">
-                  ₱{" "}
-                  {item.price.toLocaleString("en-US", {
-                    style: "decimal",
-                    minimumFractionDigits: 2,
-                  })}
-                </h1>
+                <h1 className="price center">₱ {item.price}</h1>
               </div>
 
               <div className="bottom">
