@@ -33,10 +33,21 @@ const Footer = () => {
         <div className="links">
           <h2>Get in Touch</h2>
           <ul>
-            <li>pitarsons@gmail.com</li>
-            <li>09123456789</li>
-            <li>Pit Arsons</li>
-            <li>@Pit_Arsons</li>
+            <li>pitarsons@outlook.com</li>
+            <li>0917 513 4495</li>
+            <li>
+              <a
+                href="https://web.facebook.com/Pit-Arsons-104112608002561"
+                target="_blank"
+              >
+                FB: Pit Arsons
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/pit_arsons/" target="_blank">
+                IG: @pit_arsons
+              </a>
+            </li>
           </ul>
         </div>
         <div className="links newsletter">
