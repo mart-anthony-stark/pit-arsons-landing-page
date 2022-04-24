@@ -15,7 +15,13 @@ const MeatItem = ({ item }) => {
           <h2>{item.name}</h2>
           <span className="category">{item.category}</span>
         </div>
-        <h2 className="price">₱ {item.price}</h2>
+        <h2 className="price">
+          ₱{" "}
+          {item.price.toLocaleString("en-US", {
+            style: "decimal",
+            minimumFractionDigits: 2,
+          })}
+        </h2>
         <Button onClick={handleNavigate}>View Item</Button>
       </div>
     </div>
