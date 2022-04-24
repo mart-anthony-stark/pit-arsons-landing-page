@@ -15,24 +15,17 @@ const SingleProduct = ({ meats }) => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
 
-  const [item, setItem] = useState([
-    {
-      category: "Chicken",
-      description:
-        "Slabs of pork ribs infused with an authentic smokey flavor.",
-      _id: 1,
-      img: "/src/images/Meats-Chicken/half-smoked-chicken.JPG",
-      name: "Half Smoked Chicken Peri-peri",
-      price: 350,
-    },
-  ]);
+  const [item, setItem] = useState({
+    category: "Chicken",
+    description: "Slabs of pork ribs infused with an authentic smokey flavor.",
+    _id: 1,
+    img: "/src/images/Meats-Chicken/half-smoked-chicken.JPG",
+    name: "Half Smoked Chicken Peri-peri",
+    price: 350,
+  });
 
   const getItem = async () => {
     const data = meats.find((m) => m._id === id);
-    data.price = data.price.toLocaleString("en-US", {
-      style: "decimal",
-      minimumFractionDigits: 2,
-    });
     setItem(data);
   };
 
@@ -80,7 +73,13 @@ const SingleProduct = ({ meats }) => {
               <div className="top">
                 <h2>{hashCategories[item.category]}</h2>
                 <h1>{item.name}</h1>
-                <h1 className="price center">₱ {item.price}</h1>
+                <h1 className="price center">
+                  ₱{" "}
+                  {item.price.toLocaleString("en-US", {
+                    style: "decimal",
+                    minimumFractionDigits: 2,
+                  })}
+                </h1>
               </div>
 
               <div className="bottom">
