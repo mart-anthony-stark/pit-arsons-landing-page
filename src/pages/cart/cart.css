@@ -19,6 +19,9 @@
 .cart-page section table tr td {
   padding: 15px;
 }
+.cart-page section table tr td h2 {
+  font-size: 1.7rem;
+}
 .cart-page section table tr td.product {
   display: flex;
   gap: 20px;
@@ -41,6 +44,7 @@
 }
 .cart-page .buttons {
   gap: 25px;
+  margin-top: 30px;
 }
 .cart-page a {
   all: unset;
