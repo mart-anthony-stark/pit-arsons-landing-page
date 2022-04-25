@@ -16,7 +16,8 @@ const Footer = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
     });
-    toast.success("You're now subscribed to our newsletter")
+    toast.success("You're now subscribed to our newsletter");
+    emailRef.current.value = "";
   };
   return (
     <footer>
