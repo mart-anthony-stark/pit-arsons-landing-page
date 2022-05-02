@@ -3,16 +3,22 @@ import HouseOutlinedIcon from "@mui/icons-material/HouseOutlined";
 import "./style.css";
 import Button from "../../../components/button/Button";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Deliver from "./Deliver";
 import Collect from "./Collect";
 import { useDispatch, useSelector } from "react-redux";
 
-import { editCustomer, setdeliveryMethod } from "../../../redux/info";
+import {
+  editCustomer,
+  setDeliveryAddress,
+  setDeliveryDateTime,
+  setdeliveryMethod,
+} from "../../../redux/info";
 import useValidate from "./hooks/useValidate";
 
 const Information = () => {
+  const navigate = useNavigate();
   const customerInfo = useSelector((state) => state.information.customer);
   const deliveryMethod = useSelector(
     (state) => state.information.deliveryMethod
@@ -26,6 +32,14 @@ const Information = () => {
   const handleGenderChange = (e) => {
     dispatch(editCustomer({ ...customerInfo, gender: e.target.value }));
   };
+
+  const deliveryAddress = useSelector(
+    (state) => state.information.deliveryAddress
+  );
+
+  const deliveryDateTime = useSelector(
+    (state) => state.information.deliveryDateTime
+  );
 
   const { validate } = useValidate();
 
@@ -171,13 +185,141 @@ const Information = () => {
         //   Render when delivery method is collect
         <Collect />
       )}
+      <h1>Delivery Address</h1>
+      <div className="input-container">
+        <div className="two-cols">
+          <input
+            type="text"
+            placeholder="First Name"
+            value={deliveryAddress.firstname}
+            onChange={(e) =>
+              dispatch(
+                setDeliveryAddress({
+                  ...deliveryAddress,
+                  firstname: e.target.value,
+                })
+              )
+            }
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            value={deliveryAddress.lastname}
+            onChange={(e) =>
+              dispatch(
+                setDeliveryAddress({
+                  ...deliveryAddress,
+                  lastname: e.target.value,
+                })
+              )
+            }
+          />
+        </div>
+        <input
+          type="text"
+          placeholder="Street"
+          className="full mt-20"
+          value={deliveryAddress.street}
+          onChange={(e) =>
+            dispatch(
+              setDeliveryAddress({
+                ...deliveryAddress,
+                street: e.target.value,
+              })
+            )
+          }
+        />
+        <input
+          type="text"
+          placeholder="Barangay"
+          className="full mt-20"
+          value={deliveryAddress.brgy}
+          onChange={(e) =>
+            dispatch(
+              setDeliveryAddress({
+                ...deliveryAddress,
+                brgy: e.target.value,
+              })
+            )
+          }
+        />
+        <div className="two-cols mt-20">
+          <input
+            type="text"
+            placeholder="City"
+            value={deliveryAddress.city}
+            onChange={(e) =>
+              dispatch(
+                setDeliveryAddress({
+                  ...deliveryAddress,
+                  city: e.target.value,
+                })
+              )
+            }
+          />
+          <input
+            type="text"
+            placeholder="Region"
+            value={deliveryAddress.region}
+            onChange={(e) =>
+              dispatch(
+                setDeliveryAddress({
+                  ...deliveryAddress,
+                  region: e.target.value,
+                })
+              )
+            }
+          />
+        </div>
+        <div className="two-cols mt-20">
+          <input
+            type="text"
+            placeholder="Country"
+            value={deliveryAddress.country}
+            onChange={(e) =>
+              dispatch(
+                setDeliveryAddress({
+                  ...deliveryAddress,
+                  country: e.target.value,
+                })
+              )
+            }
+          />
+          <input
+            type="text"
+            placeholder="Zip Code"
+            value={deliveryAddress.zip_code}
+            onChange={(e) =>
+              dispatch(
+                setDeliveryAddress({
+                  ...deliveryAddress,
+                  zip_code: e.target.value,
+                })
+              )
+            }
+          />
+        </div>
+      </div>
+
+      <h1>Delivery Date & Time</h1>
+      <input
+        type="datetime-local"
+        value={deliveryDateTime}
+        onChange={(e) => dispatch(setDeliveryDateTime(e.target.value))}
+      />
 
       <div className="buttons flex-end center">
         <Link to="/checkout/instructions">
           Return to Special
           <br /> Instructions
         </Link>
-        <Button onClick={validate}>Proceed to Payment</Button>
+        <Button
+          onClick={() => {
+            if (validate()) navigate("/checkout/payment");
+          }}
+        >
+          Proceed to Payment
+        </Button>
       </div>
     </div>
   );
