@@ -5,11 +5,13 @@ import BDO from "../../../images/Bank Logos/bdo-logo.png";
 import Button from "../../../components/button/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { setPaymentMethod } from "../../../redux/info";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import PlaceOrder from "./PlaceOrder";
+import useValidate from "../information/hooks/useValidate";
 
 const Payment = () => {
+  const navigate = useNavigate();
   const { handlePlaceOrder } = PlaceOrder();
 
   const [disabledChangeContact, setDisabledChangeContact] = useState(true);
@@ -26,6 +28,11 @@ const Payment = () => {
   const handleClickPayment = (method) => {
     dispatch(setPaymentMethod(method));
   };
+  const { validate } = useValidate();
+
+  useEffect(() => {
+    if (!validate()) navigate("/checkout/information");
+  }, []);
 
   return (
     <div className="payment">
