@@ -127,7 +127,9 @@ const Cart = () => {
         {cart.length === 0 && <h1 className="center">No items in cart</h1>}
 
         <div className="buttons flex-end">
-          <Button>Continue Shopping</Button>
+          <Button onClick={() => navigate("/meats/chicken")}>
+            Continue Shopping
+          </Button>
           <Button onClick={handleCheckoutBtn}>Checkout</Button>
         </div>
       </section>
