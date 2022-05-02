@@ -24,7 +24,6 @@ const PlaceOrder = () => {
     };
   });
   const order = useSelector((state) => state.order);
-  console.log(cart);
 
   const sendOrderForm = async (body) => {
     const loader = toast.loading("Processing your order");
